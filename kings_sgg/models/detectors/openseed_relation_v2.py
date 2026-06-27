@@ -80,6 +80,12 @@ class OpenSeeDRelationV2(BaseDetector):
         self.train_cfg = train_cfg
         self.test_cfg = test_cfg
 
+    #def train(self, mode=True):
+    #    """Convert the detector into training mode while keeping OpenSeeD frozen."""
+    #    super(OpenSeeDRelationV2, self).train(mode)
+    #    self.openseed.eval()
+    #    return self
+
     def extract_feat(self, img):
         pass
 
@@ -101,10 +107,15 @@ class OpenSeeDRelationV2(BaseDetector):
         # input to openseed should not be padded.
         rm_pad_h, rm_pad_w = img_meta['img_shape'][:2]
         img = img[:, :rm_pad_h, :rm_pad_w]
-        batch_inputs = [{'image': img, 'height': img_meta['ori_shape']
-                         [0], 'width': img_meta['ori_shape'][1]}]
-        # 2. forward openseed
+        # 1. Prepare batch inputs
+        batch_inputs = [{'image': img, 'height': img_meta['ori_shape'][0], 'width': img_meta['ori_shape'][1]}]
+        # --- MODIFICATION START ---
+        # Explicitly enforce eval mode and wrap in no_grad context
+        #self.openseed.eval()
+        #with torch.no_grad():
+        #    openseed_outputs, mask_features = self.openseed.forward(batch_inputs)
         openseed_outputs, mask_features = self.openseed.forward(batch_inputs)
+
         openseed_output = openseed_outputs[0]
         if mode == 'train':
             losses = dict()

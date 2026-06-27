@@ -52,7 +52,8 @@ num_relation_classes = 56
 model = dict(
     type='OpenSeeDRelationV2',
     openseed_config_path='./3rdparty/OpenSeeD/configs/openseed/openseed_swint_lang.yaml',
-    openseed_pretrained_path='./work_dirs/checkpoints/openseed/model_state_dict_swint_51.2ap.pt',
+    openseed_pretrained_path='/workspace/OpenSeeD/model_state_dict_swint_51.2ap.pt',
+    #openseed_pretrained_path='./work_dirs/checkpoints/openseed/model_state_dict_swint_51.2ap.pt',
     thing_classes=thing_classes,
     stuff_classes=stuff_classes,
     relation_head=dict(
@@ -149,11 +150,12 @@ data = dict(
 #########################
 optimizer = dict(
     type='AdamW',
-    lr=0.0001,
+    lr=0.00001,
     weight_decay=0.05,
     eps=1e-8,
     betas=(0.9, 0.999))
-optimizer_config = dict(grad_clip=dict(max_norm=0.01, norm_type=2))
+#optimizer_config = dict(grad_clip=dict(max_norm=0.01, norm_type=2))
+optimizer_config = dict(grad_clip=dict(max_norm=35.0, norm_type=2))
 
 lr_config = dict(
     policy='step',

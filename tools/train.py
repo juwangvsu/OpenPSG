@@ -9,6 +9,15 @@ from prettytable import PrettyTable
 
 import mmcv
 import torch
+
+# Monkey patch to fix MMCV integer device issue with modern PyTorch
+_old_get_stream = torch.nn.parallel._functions._get_stream
+def _new_get_stream(device):
+    if isinstance(device, int):
+        device = torch.device(f'cuda:{device}')
+    return _old_get_stream(device)
+torch.nn.parallel._functions._get_stream = _new_get_stream
+
 import torch.distributed as dist
 from mmcv import Config, DictAction
 from mmcv.runner import get_dist_info, init_dist

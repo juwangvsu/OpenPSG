@@ -232,6 +232,7 @@ class RelationTransformerHeadV4(BaseModule):
             # if len(selected_idxes) < max(self.max_llm_forward_num, qformer_batch_size):
             #     more_selected_idxes = rel_cls_pred.squeeze().topk(self.max_llm_forward_num).indices.tolist()
             #     selected_idxes = list(set(selected_idxes) | set(more_selected_idxes))
+            print(f"xxx self.rel_cls_type {self.rel_cls_type}")
             if 'binary' in self.rel_cls_type:
                 selected_idxes = binary_rel_cls_pred.squeeze(1).topk(
                     qformer_batch_size).indices.tolist()[:20]
@@ -352,6 +353,9 @@ class RelationTransformerHeadV4(BaseModule):
             # output_dict['multiclass_rel_cls_recall@20'] = self.get_recall_N(
             #     multiclass_rel_cls_pred.view((1, object_num, object_num, self.num_relation_classes)), relation_target.view((1, object_num, object_num, self.num_relation_classes)))
         else:
+            if 'rel_pred_list' not in locals():
+                rel_pred_list = []
+                rel_score_list = []
             output_dict['rel_pred'] = llm_rel_pred_list + rel_pred_list
             output_dict['rel_score'] = llm_rel_score_list + rel_score_list
 

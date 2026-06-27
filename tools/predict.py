@@ -25,7 +25,12 @@ def get_model(config, checkpoint, test_pipeline_img_scale):
     test_pipeline[1]['img_scale'] = test_pipeline_img_scale
     config['data']['test']['pipeline'] = test_pipeline
 
+    if config['model']['test_cfg'] is None:
+        config['model']['test_cfg'] = dict()
+
     config['model']['test_cfg']['predict_relation'] = True
+    if 'backbone' not in config['model']:
+        config['model']['backbone'] = dict()
 
     model = init_detector(config, checkpoint)
     return model
@@ -51,6 +56,7 @@ def inference(test_pipeline_img_scale, config, checkpoint, test_file, data_dir, 
 
         img_file = os.path.join(data_dir, d['file_name'])
         img = cv2.imread(img_file)
+        print(f"img_file {img_file} {img} {model}")
         results = inference_detector(model, img_file)
 
         pan_results = results['pan_results']
@@ -103,14 +109,13 @@ def inference(test_pipeline_img_scale, config, checkpoint, test_file, data_dir, 
 
 
 if __name__ == '__main__':
-    exp_tag = 'v99_0'
+    exp_tag = sys.argv[1] 
     epoch = 12
-    data_dir = 'path/to/data'
-    test_file = 'path/to/test.json'
-    root_path = './work_dirs/kings_sgg_{}'.format(exp_tag)
-    output_dir = 'path/to/output/{}_output_results'.format(
-        exp_tag)
-    config_file = '{}/{}.py'.format(root_path, exp_tag)
+    data_dir = '/'
+    test_file = '/data/jwang/Documents/OpenPSG/data/psg/jwang_test.json'
+    root_path = './work_dirs/ov_psg_{}'.format(exp_tag)
+    output_dir = '{}/epoch_{}_results_predict'.format(root_path, epoch)
+    config_file = '{}/{}_v4_ov.py'.format(root_path, exp_tag)
     checkpoint_file = '{}/epoch_{}.pth'.format(root_path, epoch)
 
     inference(

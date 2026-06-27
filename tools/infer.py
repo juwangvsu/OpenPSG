@@ -46,6 +46,7 @@ def get_model(config, checkpoint, test_pipeline_img_scale):
     if 'backbone' not in config['model']:
         config['model']['backbone'] = dict()
 
+    print(f"config {config}")
     model = init_detector(config, checkpoint)
     return model
 
@@ -75,7 +76,7 @@ def inference(test_pipeline_img_scale, config, checkpoint, test_file, data_dir, 
     palette = sns.color_palette('pastel', len(object_classes))
     model = get_model(config, checkpoint, test_pipeline_img_scale)
 
-    print('Inference begin.')
+    print(f'Inference begin. test_file {test_file}')
     test_idx = -1
     prog_bar = mmcv.ProgressBar(len(test_id_list))
     all_result_dict = []
@@ -265,7 +266,7 @@ if __name__ == '__main__':
     test_file = './data/psg/psg.json'
     root_path = './work_dirs/ov_psg_{}'.format(exp_tag)
     output_dir = '{}/epoch_{}_results'.format(root_path, epoch)
-    config_file = '{}/{}.py'.format(root_path, exp_tag)
+    config_file = '{}/{}_v4_ov.py'.format(root_path, exp_tag)
     checkpoint_file = '{}/epoch_{}.pth'.format(root_path, epoch)
 
     inference(
