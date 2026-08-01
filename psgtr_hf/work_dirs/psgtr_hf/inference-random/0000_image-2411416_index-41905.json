@@ -1,0 +1,553 @@
+{
+  "dataset_index": 41905,
+  "image_id": 2411416,
+  "file_name": "/data/jwang/datasets/coco/train2017/000000089436.jpg",
+  "panoptic_file_name": "/data/jwang/datasets/coco/panoptic_train2017/000000089436.png",
+  "original_size": [
+    590,
+    640
+  ],
+  "visualization": "0000_image-2411416_index-41905.png",
+  "ground_truth": {
+    "entities": [
+      {
+        "entity_index": 0,
+        "segment_id": 4879511,
+        "label_id": 20,
+        "label": "elephant",
+        "box_xyxy": [
+          0.0,
+          1.0,
+          581.0,
+          590.0
+        ]
+      },
+      {
+        "entity_index": 1,
+        "segment_id": 1868934,
+        "label_id": 125,
+        "label": "grass-merged",
+        "box_xyxy": [
+          0.0,
+          0.0,
+          640.0,
+          590.0
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject_entity_index": 0,
+        "subject_label_id": 20,
+        "subject_label": "elephant",
+        "predicate_id": 1,
+        "predicate": "in front of",
+        "object_entity_index": 1,
+        "object_label_id": 125,
+        "object_label": "grass-merged"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "query_index": 58,
+      "score": 0.6848007440567017,
+      "subject_score": 0.9432898759841919,
+      "object_score": 0.9742801785469055,
+      "predicate_score": 0.3494327962398529,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.8125,
+        0.72021484375,
+        577.0,
+        590.5
+      ],
+      "object_box_xyxy": [
+        0.0,
+        496.75,
+        640.0,
+        592.5
+      ]
+    },
+    {
+      "query_index": 65,
+      "score": 0.63843834400177,
+      "subject_score": 0.881813108921051,
+      "object_score": 0.9706857204437256,
+      "predicate_score": 0.3040196895599365,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.03125,
+        2.3046875,
+        575.0,
+        591.5
+      ],
+      "object_box_xyxy": [
+        -0.46875,
+        532.0,
+        639.5,
+        591.0
+      ]
+    },
+    {
+      "query_index": 42,
+      "score": 0.5895286798477173,
+      "subject_score": 0.9403252005577087,
+      "object_score": 0.9637553095817566,
+      "predicate_score": 0.2260841280221939,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.34375,
+        2.736328125,
+        577.5,
+        592.5
+      ],
+      "object_box_xyxy": [
+        -0.3125,
+        516.0,
+        639.5,
+        591.5
+      ]
+    },
+    {
+      "query_index": 30,
+      "score": 0.5632500052452087,
+      "subject_score": 0.8881147503852844,
+      "object_score": 0.9718045592308044,
+      "predicate_score": 0.2070406824350357,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.5,
+        2.16015625,
+        578.5,
+        591.5
+      ],
+      "object_box_xyxy": [
+        35.3125,
+        532.5,
+        599.0,
+        591.0
+      ]
+    },
+    {
+      "query_index": 67,
+      "score": 0.5588042140007019,
+      "subject_score": 0.922547459602356,
+      "object_score": 0.9554794430732727,
+      "predicate_score": 0.1979561448097229,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -1.5625,
+        1.583984375,
+        579.0,
+        591.0
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        519.5,
+        639.5,
+        592.5
+      ]
+    },
+    {
+      "query_index": 74,
+      "score": 0.5567838549613953,
+      "subject_score": 0.88140869140625,
+      "object_score": 0.9668427109718323,
+      "predicate_score": 0.20254743099212646,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -3.28125,
+        2.16015625,
+        578.0,
+        591.5
+      ],
+      "object_box_xyxy": [
+        69.5,
+        536.0,
+        557.0,
+        591.0
+      ]
+    },
+    {
+      "query_index": 78,
+      "score": 0.5463417768478394,
+      "subject_score": 0.9234659671783447,
+      "object_score": 0.9598053097724915,
+      "predicate_score": 0.18398788571357727,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -3.125,
+        1.583984375,
+        579.0,
+        591.0
+      ],
+      "object_box_xyxy": [
+        64.5,
+        531.5,
+        565.5,
+        591.0
+      ]
+    },
+    {
+      "query_index": 54,
+      "score": 0.5417024493217468,
+      "subject_score": 0.936801552772522,
+      "object_score": 0.9345968961715698,
+      "predicate_score": 0.18155592679977417,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.1875,
+        1.4404296875,
+        577.5,
+        591.0
+      ],
+      "object_box_xyxy": [
+        35.0,
+        527.0,
+        597.5,
+        591.5
+      ]
+    },
+    {
+      "query_index": 2,
+      "score": 0.5186141133308411,
+      "subject_score": 0.8889968395233154,
+      "object_score": 0.9671655893325806,
+      "predicate_score": 0.16223028302192688,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.34375,
+        6.9140625,
+        577.5,
+        596.5
+      ],
+      "object_box_xyxy": [
+        0.625,
+        538.5,
+        638.0,
+        591.5
+      ]
+    },
+    {
+      "query_index": 68,
+      "score": 0.5173752307891846,
+      "subject_score": 0.9106242656707764,
+      "object_score": 0.959061861038208,
+      "predicate_score": 0.1585736870765686,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.34375,
+        1.0078125,
+        577.0,
+        590.5
+      ],
+      "object_box_xyxy": [
+        67.375,
+        539.5,
+        436.25,
+        590.5
+      ]
+    },
+    {
+      "query_index": 6,
+      "score": 0.5129504203796387,
+      "subject_score": 0.8597612380981445,
+      "object_score": 0.9657997488975525,
+      "predicate_score": 0.16254039108753204,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -0.3125,
+        2.16015625,
+        580.0,
+        591.5
+      ],
+      "object_box_xyxy": [
+        61.875,
+        538.5,
+        454.0,
+        590.5
+      ]
+    },
+    {
+      "query_index": 39,
+      "score": 0.5047875642776489,
+      "subject_score": 0.9392659664154053,
+      "object_score": 0.9674381613731384,
+      "predicate_score": 0.14155139029026031,
+      "subject_label_id": 116,
+      "subject_label": "tree-merged",
+      "predicate_id": 3,
+      "predicate": "on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        1.25,
+        2.3046875,
+        641.0,
+        588.5
+      ],
+      "object_box_xyxy": [
+        42.65625,
+        501.5,
+        597.0,
+        593.5
+      ]
+    },
+    {
+      "query_index": 83,
+      "score": 0.4900924563407898,
+      "subject_score": 0.9324182271957397,
+      "object_score": 0.9599733352661133,
+      "predicate_score": 0.1315116286277771,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.34375,
+        0.72021484375,
+        578.0,
+        590.5
+      ],
+      "object_box_xyxy": [
+        83.625,
+        531.0,
+        522.5,
+        591.5
+      ]
+    },
+    {
+      "query_index": 82,
+      "score": 0.48471799492836,
+      "subject_score": 0.8788268566131592,
+      "object_score": 0.9635359048843384,
+      "predicate_score": 0.1344919353723526,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -2.8125,
+        2.44921875,
+        578.0,
+        592.5
+      ],
+      "object_box_xyxy": [
+        36.40625,
+        544.0,
+        337.0,
+        590.5
+      ]
+    },
+    {
+      "query_index": 90,
+      "score": 0.47508981823921204,
+      "subject_score": 0.9218734502792358,
+      "object_score": 0.964691698551178,
+      "predicate_score": 0.12057778984308243,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -3.90625,
+        2.015625,
+        573.0,
+        592.5
+      ],
+      "object_box_xyxy": [
+        85.0,
+        525.0,
+        518.0,
+        591.0
+      ]
+    },
+    {
+      "query_index": 71,
+      "score": 0.45018965005874634,
+      "subject_score": 0.9156227707862854,
+      "object_score": 0.9726592302322388,
+      "predicate_score": 0.10244935750961304,
+      "subject_label_id": 116,
+      "subject_label": "tree-merged",
+      "predicate_id": 3,
+      "predicate": "on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        1.25,
+        3.45703125,
+        641.0,
+        583.5
+      ],
+      "object_box_xyxy": [
+        72.5,
+        531.5,
+        566.0,
+        591.5
+      ]
+    },
+    {
+      "query_index": 18,
+      "score": 0.44606274366378784,
+      "subject_score": 0.9668723940849304,
+      "object_score": 0.5152336359024048,
+      "predicate_score": 0.17816175520420074,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        -0.15625,
+        0.8642578125,
+        583.0,
+        591.0
+      ],
+      "object_box_xyxy": [
+        0.625,
+        6.9140625,
+        640.0,
+        597.0
+      ]
+    },
+    {
+      "query_index": 48,
+      "score": 0.44082364439964294,
+      "subject_score": 0.9287155270576477,
+      "object_score": 0.8963797092437744,
+      "predicate_score": 0.10290107876062393,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        0.46875,
+        0.2880859375,
+        572.0,
+        590.0
+      ],
+      "object_box_xyxy": [
+        77.1875,
+        501.0,
+        467.25,
+        591.0
+      ]
+    },
+    {
+      "query_index": 98,
+      "score": 0.43887782096862793,
+      "subject_score": 0.9481526613235474,
+      "object_score": 0.892304003238678,
+      "predicate_score": 0.09991709142923355,
+      "subject_label_id": 116,
+      "subject_label": "tree-merged",
+      "predicate_id": 3,
+      "predicate": "on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        1.25,
+        0.14404296875,
+        641.0,
+        589.5
+      ],
+      "object_box_xyxy": [
+        58.75,
+        481.0,
+        580.5,
+        594.0
+      ]
+    },
+    {
+      "query_index": 20,
+      "score": 0.4379051625728607,
+      "subject_score": 0.9380069375038147,
+      "object_score": 0.9213382601737976,
+      "predicate_score": 0.09716617316007614,
+      "subject_label_id": 20,
+      "subject_label": "elephant",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        1.5625,
+        0.2880859375,
+        578.0,
+        590.0
+      ],
+      "object_box_xyxy": [
+        40.0,
+        533.5,
+        307.5,
+        590.5
+      ]
+    }
+  ]
+}

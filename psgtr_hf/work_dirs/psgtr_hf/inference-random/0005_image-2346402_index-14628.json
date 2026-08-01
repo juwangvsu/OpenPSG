@@ -1,0 +1,795 @@
+{
+  "dataset_index": 14628,
+  "image_id": 2346402,
+  "file_name": "/data/jwang/datasets/coco/train2017/000000343108.jpg",
+  "panoptic_file_name": "/data/jwang/datasets/coco/panoptic_train2017/000000343108.png",
+  "original_size": [
+    512,
+    640
+  ],
+  "visualization": "0005_image-2346402_index-14628.png",
+  "ground_truth": {
+    "entities": [
+      {
+        "entity_index": 0,
+        "segment_id": 6052449,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          424.0,
+          330.0,
+          435.0,
+          349.0
+        ]
+      },
+      {
+        "entity_index": 1,
+        "segment_id": 3417915,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          15.0,
+          302.0,
+          30.0,
+          330.0
+        ]
+      },
+      {
+        "entity_index": 2,
+        "segment_id": 2695454,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          37.0,
+          300.0,
+          43.0,
+          315.0
+        ]
+      },
+      {
+        "entity_index": 3,
+        "segment_id": 5390655,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          73.0,
+          303.0,
+          76.0,
+          315.0
+        ]
+      },
+      {
+        "entity_index": 4,
+        "segment_id": 4074819,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          76.0,
+          300.0,
+          82.0,
+          318.0
+        ]
+      },
+      {
+        "entity_index": 5,
+        "segment_id": 7427394,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          57.0,
+          300.0,
+          62.0,
+          314.0
+        ]
+      },
+      {
+        "entity_index": 6,
+        "segment_id": 5325902,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          43.0,
+          297.0,
+          53.0,
+          318.0
+        ]
+      },
+      {
+        "entity_index": 7,
+        "segment_id": 8023148,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          81.0,
+          307.0,
+          84.0,
+          313.0
+        ]
+      },
+      {
+        "entity_index": 8,
+        "segment_id": 8087912,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          52.0,
+          301.0,
+          57.0,
+          317.0
+        ]
+      },
+      {
+        "entity_index": 9,
+        "segment_id": 3354154,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          418.0,
+          327.0,
+          427.0,
+          347.0
+        ]
+      },
+      {
+        "entity_index": 10,
+        "segment_id": 7032390,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          67.0,
+          300.0,
+          73.0,
+          317.0
+        ]
+      },
+      {
+        "entity_index": 11,
+        "segment_id": 4729647,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          59.0,
+          300.0,
+          66.0,
+          315.0
+        ]
+      },
+      {
+        "entity_index": 12,
+        "segment_id": 8352885,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          431.0,
+          330.0,
+          444.0,
+          348.0
+        ]
+      },
+      {
+        "entity_index": 13,
+        "segment_id": 5782828,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          1.0,
+          306.0,
+          11.0,
+          329.0
+        ]
+      },
+      {
+        "entity_index": 14,
+        "segment_id": 7823443,
+        "label_id": 4,
+        "label": "airplane",
+        "box_xyxy": [
+          0.0,
+          123.0,
+          640.0,
+          462.0
+        ]
+      },
+      {
+        "entity_index": 15,
+        "segment_id": 13740438,
+        "label_id": 119,
+        "label": "sky-other-merged",
+        "box_xyxy": [
+          0.0,
+          0.0,
+          640.0,
+          307.0
+        ]
+      },
+      {
+        "entity_index": 16,
+        "segment_id": 7368303,
+        "label_id": 123,
+        "label": "pavement-merged",
+        "box_xyxy": [
+          0.0,
+          304.0,
+          640.0,
+          512.0
+        ]
+      },
+      {
+        "entity_index": 17,
+        "segment_id": 8812404,
+        "label_id": 129,
+        "label": "building-other-merged",
+        "box_xyxy": [
+          418.0,
+          253.0,
+          640.0,
+          340.0
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject_entity_index": 1,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 11,
+        "predicate": "walking on",
+        "object_entity_index": 16,
+        "object_label_id": 123,
+        "object_label": "pavement-merged"
+      },
+      {
+        "subject_entity_index": 2,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 11,
+        "predicate": "walking on",
+        "object_entity_index": 16,
+        "object_label_id": 123,
+        "object_label": "pavement-merged"
+      },
+      {
+        "subject_entity_index": 14,
+        "subject_label_id": 4,
+        "subject_label": "airplane",
+        "predicate_id": 47,
+        "predicate": "parked on",
+        "object_entity_index": 16,
+        "object_label_id": 123,
+        "object_label": "pavement-merged"
+      },
+      {
+        "subject_entity_index": 14,
+        "subject_label_id": 4,
+        "subject_label": "airplane",
+        "predicate_id": 0,
+        "predicate": "over",
+        "object_entity_index": 17,
+        "object_label_id": 129,
+        "object_label": "building-other-merged"
+      },
+      {
+        "subject_entity_index": 15,
+        "subject_label_id": 119,
+        "subject_label": "sky-other-merged",
+        "predicate_id": 0,
+        "predicate": "over",
+        "object_entity_index": 14,
+        "object_label_id": 4,
+        "object_label": "airplane"
+      },
+      {
+        "subject_entity_index": 15,
+        "subject_label_id": 119,
+        "subject_label": "sky-other-merged",
+        "predicate_id": 0,
+        "predicate": "over",
+        "object_entity_index": 16,
+        "object_label_id": 123,
+        "object_label": "pavement-merged"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "query_index": 49,
+      "score": 0.9655811190605164,
+      "subject_score": 0.9985985159873962,
+      "object_score": 0.972044825553894,
+      "predicate_score": 0.9274470210075378,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 4,
+      "object_label": "airplane",
+      "subject_box_xyxy": [
+        1.25,
+        -1.875,
+        641.0,
+        328.0
+      ],
+      "object_box_xyxy": [
+        -0.625,
+        158.0,
+        639.5,
+        390.5
+      ]
+    },
+    {
+      "query_index": 89,
+      "score": 0.9272260665893555,
+      "subject_score": 0.997955322265625,
+      "object_score": 0.9415068030357361,
+      "predicate_score": 0.8484422564506531,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 4,
+      "object_label": "airplane",
+      "subject_box_xyxy": [
+        1.25,
+        -2.125,
+        641.0,
+        327.5
+      ],
+      "object_box_xyxy": [
+        54.9375,
+        220.875,
+        272.25,
+        370.0
+      ]
+    },
+    {
+      "query_index": 21,
+      "score": 0.9116734266281128,
+      "subject_score": 0.9990198612213135,
+      "object_score": 0.8622990250587463,
+      "predicate_score": 0.8796013593673706,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 4,
+      "object_label": "airplane",
+      "subject_box_xyxy": [
+        1.25,
+        -2.125,
+        641.0,
+        328.5
+      ],
+      "object_box_xyxy": [
+        12.65625,
+        227.75,
+        624.5,
+        352.75
+      ]
+    },
+    {
+      "query_index": 80,
+      "score": 0.7866286039352417,
+      "subject_score": 0.9880629777908325,
+      "object_score": 0.557569146156311,
+      "predicate_score": 0.8835391402244568,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        0.9375,
+        -0.375,
+        641.0,
+        327.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        290.25,
+        640.0,
+        514.0
+      ]
+    },
+    {
+      "query_index": 64,
+      "score": 0.7723309397697449,
+      "subject_score": 0.9893089532852173,
+      "object_score": 0.5191980600357056,
+      "predicate_score": 0.8969026207923889,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        1.25,
+        -0.875,
+        641.0,
+        326.5
+      ],
+      "object_box_xyxy": [
+        0.0,
+        281.75,
+        640.0,
+        511.75
+      ]
+    },
+    {
+      "query_index": 3,
+      "score": 0.7535749077796936,
+      "subject_score": 0.9920103549957275,
+      "object_score": 0.4854820966720581,
+      "predicate_score": 0.8885663151741028,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        1.25,
+        -1.125,
+        641.0,
+        325.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        264.25,
+        640.0,
+        511.25
+      ]
+    },
+    {
+      "query_index": 0,
+      "score": 0.7371299266815186,
+      "subject_score": 0.994753360748291,
+      "object_score": 0.5481138229370117,
+      "predicate_score": 0.7345916628837585,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        1.25,
+        -0.75,
+        641.0,
+        330.5
+      ],
+      "object_box_xyxy": [
+        319.5,
+        306.25,
+        373.0,
+        354.25
+      ]
+    },
+    {
+      "query_index": 55,
+      "score": 0.6925243139266968,
+      "subject_score": 0.9911080598831177,
+      "object_score": 0.5722221732139587,
+      "predicate_score": 0.5856248140335083,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        1.25,
+        -0.625,
+        641.0,
+        331.0
+      ],
+      "object_box_xyxy": [
+        295.5,
+        312.5,
+        341.5,
+        353.0
+      ]
+    },
+    {
+      "query_index": 99,
+      "score": 0.6634177565574646,
+      "subject_score": 0.994743824005127,
+      "object_score": 0.40405264496803284,
+      "predicate_score": 0.7264606356620789,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        1.25,
+        -1.0,
+        641.0,
+        329.5
+      ],
+      "object_box_xyxy": [
+        44.625,
+        310.5,
+        99.5,
+        348.0
+      ]
+    },
+    {
+      "query_index": 5,
+      "score": 0.659091591835022,
+      "subject_score": 0.9922866821289062,
+      "object_score": 0.44545578956604004,
+      "predicate_score": 0.6477322578430176,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        1.25,
+        -0.5,
+        641.0,
+        332.5
+      ],
+      "object_box_xyxy": [
+        294.75,
+        306.0,
+        343.5,
+        342.0
+      ]
+    },
+    {
+      "query_index": 1,
+      "score": 0.6485011577606201,
+      "subject_score": 0.995125949382782,
+      "object_score": 0.39087188243865967,
+      "predicate_score": 0.7011642456054688,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        1.25,
+        -1.125,
+        641.0,
+        331.5
+      ],
+      "object_box_xyxy": [
+        120.5,
+        304.5,
+        168.875,
+        342.5
+      ]
+    },
+    {
+      "query_index": 52,
+      "score": 0.6465022563934326,
+      "subject_score": 0.9888980984687805,
+      "object_score": 0.4305698573589325,
+      "predicate_score": 0.634621798992157,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 129,
+      "object_label": "building-other-merged",
+      "subject_box_xyxy": [
+        1.25,
+        -0.875,
+        641.0,
+        331.5
+      ],
+      "object_box_xyxy": [
+        495.25,
+        284.5,
+        636.0,
+        342.0
+      ]
+    },
+    {
+      "query_index": 33,
+      "score": 0.6430088877677917,
+      "subject_score": 0.9876041412353516,
+      "object_score": 0.3428805470466614,
+      "predicate_score": 0.7851003408432007,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 129,
+      "object_label": "building-other-merged",
+      "subject_box_xyxy": [
+        6.5625,
+        0.125,
+        646.0,
+        333.5
+      ],
+      "object_box_xyxy": [
+        554.5,
+        302.25,
+        627.5,
+        351.25
+      ]
+    },
+    {
+      "query_index": 58,
+      "score": 0.6311905384063721,
+      "subject_score": 0.9431856274604797,
+      "object_score": 0.5374565124511719,
+      "predicate_score": 0.49606776237487793,
+      "subject_label_id": 4,
+      "subject_label": "airplane",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        2.03125,
+        130.625,
+        642.0,
+        466.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        276.75,
+        640.0,
+        516.0
+      ]
+    },
+    {
+      "query_index": 35,
+      "score": 0.6302221417427063,
+      "subject_score": 0.9936184883117676,
+      "object_score": 0.35926303267478943,
+      "predicate_score": 0.701211154460907,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 4,
+      "object_label": "airplane",
+      "subject_box_xyxy": [
+        1.25,
+        -1.0,
+        641.0,
+        331.25
+      ],
+      "object_box_xyxy": [
+        422.25,
+        284.75,
+        509.0,
+        336.75
+      ]
+    },
+    {
+      "query_index": 69,
+      "score": 0.6261589527130127,
+      "subject_score": 0.9931612014770508,
+      "object_score": 0.33155557513237,
+      "predicate_score": 0.7455516457557678,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        1.25,
+        -0.5,
+        641.0,
+        330.75
+      ],
+      "object_box_xyxy": [
+        230.75,
+        319.0,
+        299.0,
+        367.0
+      ]
+    },
+    {
+      "query_index": 81,
+      "score": 0.6195095777511597,
+      "subject_score": 0.7347862720489502,
+      "object_score": 0.6958091259002686,
+      "predicate_score": 0.46504276990890503,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        422.25,
+        0.25,
+        641.0,
+        322.0
+      ],
+      "object_box_xyxy": [
+        -0.3125,
+        282.5,
+        639.5,
+        513.5
+      ]
+    },
+    {
+      "query_index": 74,
+      "score": 0.6164190769195557,
+      "subject_score": 0.9622276425361633,
+      "object_score": 0.5219890475273132,
+      "predicate_score": 0.4663253426551819,
+      "subject_label_id": 4,
+      "subject_label": "airplane",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        7.5,
+        131.875,
+        635.5,
+        464.5
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        284.5,
+        640.0,
+        515.0
+      ]
+    },
+    {
+      "query_index": 54,
+      "score": 0.608633816242218,
+      "subject_score": 0.9684097170829773,
+      "object_score": 0.545324981212616,
+      "predicate_score": 0.4269271194934845,
+      "subject_label_id": 4,
+      "subject_label": "airplane",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        7.65625,
+        128.125,
+        635.5,
+        462.5
+      ],
+      "object_box_xyxy": [
+        0.0,
+        266.25,
+        640.0,
+        513.5
+      ]
+    },
+    {
+      "query_index": 30,
+      "score": 0.6016326546669006,
+      "subject_score": 0.9567293524742126,
+      "object_score": 0.5036343932151794,
+      "predicate_score": 0.4519493877887726,
+      "subject_label_id": 4,
+      "subject_label": "airplane",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        2.96875,
+        130.25,
+        639.5,
+        465.25
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        285.5,
+        640.0,
+        515.0
+      ]
+    }
+  ]
+}

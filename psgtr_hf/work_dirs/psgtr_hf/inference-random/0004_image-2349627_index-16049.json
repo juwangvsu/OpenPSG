@@ -1,0 +1,981 @@
+{
+  "dataset_index": 16049,
+  "image_id": 2349627,
+  "file_name": "/data/jwang/datasets/coco/train2017/000000311416.jpg",
+  "panoptic_file_name": "/data/jwang/datasets/coco/panoptic_train2017/000000311416.png",
+  "original_size": [
+    424,
+    640
+  ],
+  "visualization": "0004_image-2349627_index-16049.png",
+  "ground_truth": {
+    "entities": [
+      {
+        "entity_index": 0,
+        "segment_id": 3484462,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          149.0,
+          96.0,
+          216.0,
+          211.0
+        ]
+      },
+      {
+        "entity_index": 1,
+        "segment_id": 6376521,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          305.0,
+          258.0,
+          395.0,
+          341.0
+        ]
+      },
+      {
+        "entity_index": 2,
+        "segment_id": 3418665,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          205.0,
+          222.0,
+          314.0,
+          416.0
+        ]
+      },
+      {
+        "entity_index": 3,
+        "segment_id": 4737365,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          398.0,
+          298.0,
+          506.0,
+          424.0
+        ]
+      },
+      {
+        "entity_index": 4,
+        "segment_id": 2696517,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          95.0,
+          127.0,
+          158.0,
+          233.0
+        ]
+      },
+      {
+        "entity_index": 5,
+        "segment_id": 2038558,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          452.0,
+          242.0,
+          537.0,
+          347.0
+        ]
+      },
+      {
+        "entity_index": 6,
+        "segment_id": 3157593,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          318.0,
+          184.0,
+          375.0,
+          269.0
+        ]
+      },
+      {
+        "entity_index": 7,
+        "segment_id": 4143421,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          517.0,
+          301.0,
+          612.0,
+          407.0
+        ]
+      },
+      {
+        "entity_index": 8,
+        "segment_id": 6506882,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          306.0,
+          81.0,
+          364.0,
+          184.0
+        ]
+      },
+      {
+        "entity_index": 9,
+        "segment_id": 4208445,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          609.0,
+          228.0,
+          640.0,
+          400.0
+        ]
+      },
+      {
+        "entity_index": 10,
+        "segment_id": 3222336,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          197.0,
+          178.0,
+          227.0,
+          214.0
+        ]
+      },
+      {
+        "entity_index": 11,
+        "segment_id": 2500146,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          531.0,
+          237.0,
+          620.0,
+          346.0
+        ]
+      },
+      {
+        "entity_index": 12,
+        "segment_id": 3745318,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          63.0,
+          172.0,
+          159.0,
+          270.0
+        ]
+      },
+      {
+        "entity_index": 13,
+        "segment_id": 5130844,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          1.0,
+          0.0,
+          640.0,
+          424.0
+        ]
+      },
+      {
+        "entity_index": 14,
+        "segment_id": 8402468,
+        "label_id": 24,
+        "label": "backpack",
+        "box_xyxy": [
+          184.0,
+          206.0,
+          235.0,
+          270.0
+        ]
+      },
+      {
+        "entity_index": 15,
+        "segment_id": 7088669,
+        "label_id": 24,
+        "label": "backpack",
+        "box_xyxy": [
+          587.0,
+          355.0,
+          634.0,
+          423.0
+        ]
+      },
+      {
+        "entity_index": 16,
+        "segment_id": 2105386,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          256.0,
+          45.0,
+          279.0,
+          81.0
+        ]
+      },
+      {
+        "entity_index": 17,
+        "segment_id": 3239497,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          313.0,
+          32.0,
+          359.0,
+          87.0
+        ]
+      },
+      {
+        "entity_index": 18,
+        "segment_id": 6045297,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          612.0,
+          21.0,
+          634.0,
+          71.0
+        ]
+      },
+      {
+        "entity_index": 19,
+        "segment_id": 2827301,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          565.0,
+          185.0,
+          593.0,
+          224.0
+        ]
+      },
+      {
+        "entity_index": 20,
+        "segment_id": 9337438,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          501.0,
+          344.0,
+          542.0,
+          378.0
+        ]
+      },
+      {
+        "entity_index": 21,
+        "segment_id": 3353648,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          60.0,
+          127.0,
+          87.0,
+          181.0
+        ]
+      },
+      {
+        "entity_index": 22,
+        "segment_id": 7548462,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          559.0,
+          165.0,
+          581.0,
+          178.0
+        ]
+      },
+      {
+        "entity_index": 23,
+        "segment_id": 2500404,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          43.0,
+          271.0,
+          93.0,
+          322.0
+        ]
+      },
+      {
+        "entity_index": 24,
+        "segment_id": 4080206,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          245.0,
+          212.0,
+          285.0,
+          243.0
+        ]
+      },
+      {
+        "entity_index": 25,
+        "segment_id": 10841668,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          341.0,
+          378.0,
+          410.0,
+          423.0
+        ]
+      },
+      {
+        "entity_index": 26,
+        "segment_id": 3484206,
+        "label_id": 67,
+        "label": "cell phone",
+        "box_xyxy": [
+          525.0,
+          328.0,
+          537.0,
+          334.0
+        ]
+      },
+      {
+        "entity_index": 27,
+        "segment_id": 3816010,
+        "label_id": 67,
+        "label": "cell phone",
+        "box_xyxy": [
+          68.0,
+          104.0,
+          78.0,
+          115.0
+        ]
+      },
+      {
+        "entity_index": 28,
+        "segment_id": 2828331,
+        "label_id": 67,
+        "label": "cell phone",
+        "box_xyxy": [
+          289.0,
+          173.0,
+          302.0,
+          185.0
+        ]
+      },
+      {
+        "entity_index": 29,
+        "segment_id": 5524330,
+        "label_id": 67,
+        "label": "cell phone",
+        "box_xyxy": [
+          21.0,
+          273.0,
+          32.0,
+          282.0
+        ]
+      },
+      {
+        "entity_index": 30,
+        "segment_id": 6581148,
+        "label_id": 122,
+        "label": "floor-other-merged",
+        "box_xyxy": [
+          0.0,
+          0.0,
+          640.0,
+          424.0
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject_entity_index": 0,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 5,
+        "predicate": "attached to",
+        "object_entity_index": 28,
+        "object_label_id": 67,
+        "object_label": "cell phone"
+      },
+      {
+        "subject_entity_index": 1,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 14,
+        "predicate": "standing on",
+        "object_entity_index": 30,
+        "object_label_id": 122,
+        "object_label": "floor-other-merged"
+      },
+      {
+        "subject_entity_index": 3,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 23,
+        "predicate": "looking at",
+        "object_entity_index": 5,
+        "object_label_id": 0,
+        "object_label": "person"
+      },
+      {
+        "subject_entity_index": 8,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 14,
+        "predicate": "standing on",
+        "object_entity_index": 30,
+        "object_label_id": 122,
+        "object_label": "floor-other-merged"
+      },
+      {
+        "subject_entity_index": 10,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 22,
+        "predicate": "carrying",
+        "object_entity_index": 14,
+        "object_label_id": 24,
+        "object_label": "backpack"
+      },
+      {
+        "subject_entity_index": 12,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 14,
+        "predicate": "standing on",
+        "object_entity_index": 30,
+        "object_label_id": 122,
+        "object_label": "floor-other-merged"
+      },
+      {
+        "subject_entity_index": 13,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 2,
+        "predicate": "beside",
+        "object_entity_index": 18,
+        "object_label_id": 26,
+        "object_label": "handbag"
+      },
+      {
+        "subject_entity_index": 18,
+        "subject_label_id": 26,
+        "subject_label": "handbag",
+        "predicate_id": 2,
+        "predicate": "beside",
+        "object_entity_index": 13,
+        "object_label_id": 0,
+        "object_label": "person"
+      },
+      {
+        "subject_entity_index": 25,
+        "subject_label_id": 26,
+        "subject_label": "handbag",
+        "predicate_id": 3,
+        "predicate": "on",
+        "object_entity_index": 30,
+        "object_label_id": 122,
+        "object_label": "floor-other-merged"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "query_index": 53,
+      "score": 0.8323430418968201,
+      "subject_score": 0.978438675403595,
+      "object_score": 0.9712597131729126,
+      "predicate_score": 0.6067895293235779,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        451.0,
+        242.0,
+        535.5,
+        348.75
+      ],
+      "object_box_xyxy": [
+        437.5,
+        228.0,
+        544.5,
+        375.0
+      ]
+    },
+    {
+      "query_index": 2,
+      "score": 0.8054754137992859,
+      "subject_score": 0.9731742143630981,
+      "object_score": 0.9391368627548218,
+      "predicate_score": 0.5717911720275879,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        400.5,
+        307.25,
+        507.5,
+        423.25
+      ],
+      "object_box_xyxy": [
+        364.5,
+        285.0,
+        475.0,
+        424.75
+      ]
+    },
+    {
+      "query_index": 85,
+      "score": 0.7874928712844849,
+      "subject_score": 0.9673056602478027,
+      "object_score": 0.9352602362632751,
+      "predicate_score": 0.5398135185241699,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        537.5,
+        243.25,
+        614.0,
+        373.75
+      ],
+      "object_box_xyxy": [
+        526.0,
+        232.75,
+        607.0,
+        365.5
+      ]
+    },
+    {
+      "query_index": 22,
+      "score": 0.780593752861023,
+      "subject_score": 0.9751169085502625,
+      "object_score": 0.9493252038955688,
+      "predicate_score": 0.5138111114501953,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        310.75,
+        77.6875,
+        368.0,
+        199.625
+      ],
+      "object_box_xyxy": [
+        300.75,
+        91.1875,
+        367.25,
+        217.0
+      ]
+    },
+    {
+      "query_index": 98,
+      "score": 0.778739333152771,
+      "subject_score": 0.9798961877822876,
+      "object_score": 0.8048065304756165,
+      "predicate_score": 0.5988317728042603,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        597.0,
+        141.25,
+        639.5,
+        411.25
+      ],
+      "object_box_xyxy": [
+        0.0,
+        -0.4140625,
+        640.0,
+        423.5
+      ]
+    },
+    {
+      "query_index": 78,
+      "score": 0.7742518782615662,
+      "subject_score": 0.9897786974906921,
+      "object_score": 0.7534312605857849,
+      "predicate_score": 0.6223934888839722,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 16,
+      "predicate": "sitting on",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        307.0,
+        249.875,
+        391.0,
+        336.5
+      ],
+      "object_box_xyxy": [
+        226.875,
+        203.875,
+        445.5,
+        420.75
+      ]
+    },
+    {
+      "query_index": 31,
+      "score": 0.7651187181472778,
+      "subject_score": 0.993768572807312,
+      "object_score": 0.9777641296386719,
+      "predicate_score": 0.4609641432762146,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        424.5,
+        112.625,
+        482.0,
+        254.0
+      ],
+      "object_box_xyxy": [
+        389.75,
+        90.625,
+        476.0,
+        280.0
+      ]
+    },
+    {
+      "query_index": 76,
+      "score": 0.7508840560913086,
+      "subject_score": 0.9779219627380371,
+      "object_score": 0.6641572117805481,
+      "predicate_score": 0.6518438458442688,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        421.0,
+        113.6875,
+        486.5,
+        257.0
+      ],
+      "object_box_xyxy": [
+        -0.3125,
+        -1.44921875,
+        639.5,
+        422.5
+      ]
+    },
+    {
+      "query_index": 75,
+      "score": 0.7508115768432617,
+      "subject_score": 0.975023627281189,
+      "object_score": 0.9437419772148132,
+      "predicate_score": 0.4599646329879761,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        323.0,
+        178.0,
+        383.75,
+        287.75
+      ],
+      "object_box_xyxy": [
+        305.5,
+        195.375,
+        369.5,
+        304.0
+      ]
+    },
+    {
+      "query_index": 87,
+      "score": 0.747702956199646,
+      "subject_score": 0.9706131815910339,
+      "object_score": 0.944624125957489,
+      "predicate_score": 0.45591312646865845,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        362.75,
+        87.75,
+        439.75,
+        250.75
+      ],
+      "object_box_xyxy": [
+        351.0,
+        98.625,
+        421.5,
+        241.0
+      ]
+    },
+    {
+      "query_index": 42,
+      "score": 0.7440773844718933,
+      "subject_score": 0.9845481514930725,
+      "object_score": 0.8766444325447083,
+      "predicate_score": 0.4773026704788208,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 16,
+      "predicate": "sitting on",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        309.75,
+        250.125,
+        392.25,
+        335.0
+      ],
+      "object_box_xyxy": [
+        270.25,
+        222.5,
+        397.75,
+        386.0
+      ]
+    },
+    {
+      "query_index": 54,
+      "score": 0.7333076000213623,
+      "subject_score": 0.9755066633224487,
+      "object_score": 0.691051185131073,
+      "predicate_score": 0.584949254989624,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        358.5,
+        87.125,
+        439.0,
+        237.625
+      ],
+      "object_box_xyxy": [
+        -0.46875,
+        -2.27734375,
+        639.5,
+        421.75
+      ]
+    },
+    {
+      "query_index": 89,
+      "score": 0.7256448268890381,
+      "subject_score": 0.9713498950004578,
+      "object_score": 0.697937548160553,
+      "predicate_score": 0.5636118054389954,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        360.25,
+        84.25,
+        438.5,
+        197.75
+      ],
+      "object_box_xyxy": [
+        -0.46875,
+        -2.484375,
+        639.5,
+        421.5
+      ]
+    },
+    {
+      "query_index": 97,
+      "score": 0.7126778960227966,
+      "subject_score": 0.9637208580970764,
+      "object_score": 0.7499815225601196,
+      "predicate_score": 0.5008158087730408,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        514.5,
+        123.1875,
+        599.0,
+        272.75
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        -0.517578125,
+        640.0,
+        423.5
+      ]
+    },
+    {
+      "query_index": 77,
+      "score": 0.7107657194137573,
+      "subject_score": 0.9832286834716797,
+      "object_score": 0.7158728241920471,
+      "predicate_score": 0.510139524936676,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        205.125,
+        219.0,
+        310.75,
+        417.0
+      ],
+      "object_box_xyxy": [
+        0.625,
+        -1.966796875,
+        640.5,
+        422.0
+      ]
+    },
+    {
+      "query_index": 49,
+      "score": 0.7048665881156921,
+      "subject_score": 0.9750736355781555,
+      "object_score": 0.6856902837753296,
+      "predicate_score": 0.523787796497345,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        481.25,
+        0.1552734375,
+        552.5,
+        82.0
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        -0.724609375,
+        640.0,
+        423.25
+      ]
+    },
+    {
+      "query_index": 96,
+      "score": 0.7011427283287048,
+      "subject_score": 0.9560679197311401,
+      "object_score": 0.9196887612342834,
+      "predicate_score": 0.39200329780578613,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        50.96875,
+        372.25,
+        153.0,
+        423.5
+      ],
+      "object_box_xyxy": [
+        55.375,
+        282.0,
+        177.5,
+        425.25
+      ]
+    },
+    {
+      "query_index": 74,
+      "score": 0.6998385190963745,
+      "subject_score": 0.9944069385528564,
+      "object_score": 0.9564833045005798,
+      "predicate_score": 0.36037278175354004,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        209.75,
+        217.125,
+        315.5,
+        420.0
+      ],
+      "object_box_xyxy": [
+        145.75,
+        231.5,
+        265.25,
+        421.0
+      ]
+    },
+    {
+      "query_index": 64,
+      "score": 0.6976062059402466,
+      "subject_score": 0.9740444421768188,
+      "object_score": 0.6748003363609314,
+      "predicate_score": 0.5165079236030579,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        482.5,
+        0.4658203125,
+        558.0,
+        87.0625
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        -0.517578125,
+        640.0,
+        423.5
+      ]
+    },
+    {
+      "query_index": 27,
+      "score": 0.6937141418457031,
+      "subject_score": 0.9696710705757141,
+      "object_score": 0.6479007005691528,
+      "predicate_score": 0.5313843488693237,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        173.875,
+        2.12109375,
+        248.625,
+        137.5
+      ],
+      "object_box_xyxy": [
+        -0.3125,
+        0.62109375,
+        639.5,
+        424.75
+      ]
+    }
+  ]
+}

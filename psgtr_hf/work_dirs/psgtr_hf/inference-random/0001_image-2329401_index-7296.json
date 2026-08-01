@@ -1,0 +1,711 @@
+{
+  "dataset_index": 7296,
+  "image_id": 2329401,
+  "file_name": "/data/jwang/datasets/coco/train2017/000000467091.jpg",
+  "panoptic_file_name": "/data/jwang/datasets/coco/panoptic_train2017/000000467091.png",
+  "original_size": [
+    427,
+    640
+  ],
+  "visualization": "0001_image-2329401_index-7296.png",
+  "ground_truth": {
+    "entities": [
+      {
+        "entity_index": 0,
+        "segment_id": 7309973,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          39.0,
+          226.0,
+          60.0,
+          290.0
+        ]
+      },
+      {
+        "entity_index": 1,
+        "segment_id": 7629715,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          23.0,
+          255.0,
+          36.0,
+          295.0
+        ]
+      },
+      {
+        "entity_index": 2,
+        "segment_id": 3617844,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          1.0,
+          218.0,
+          22.0,
+          311.0
+        ]
+      },
+      {
+        "entity_index": 3,
+        "segment_id": 6184022,
+        "label_id": 5,
+        "label": "bus",
+        "box_xyxy": [
+          56.0,
+          84.0,
+          602.0,
+          338.0
+        ]
+      },
+      {
+        "entity_index": 4,
+        "segment_id": 3173536,
+        "label_id": 9,
+        "label": "traffic light",
+        "box_xyxy": [
+          462.0,
+          93.0,
+          477.0,
+          120.0
+        ]
+      },
+      {
+        "entity_index": 5,
+        "segment_id": 6577498,
+        "label_id": 25,
+        "label": "umbrella",
+        "box_xyxy": [
+          37.0,
+          207.0,
+          59.0,
+          229.0
+        ]
+      },
+      {
+        "entity_index": 6,
+        "segment_id": 3878865,
+        "label_id": 25,
+        "label": "umbrella",
+        "box_xyxy": [
+          0.0,
+          177.0,
+          13.0,
+          191.0
+        ]
+      },
+      {
+        "entity_index": 7,
+        "segment_id": 12628909,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          38.0,
+          260.0,
+          53.0,
+          279.0
+        ]
+      },
+      {
+        "entity_index": 8,
+        "segment_id": 5002332,
+        "label_id": 107,
+        "label": "tent",
+        "box_xyxy": [
+          599.0,
+          147.0,
+          640.0,
+          296.0
+        ]
+      },
+      {
+        "entity_index": 9,
+        "segment_id": 9474964,
+        "label_id": 123,
+        "label": "pavement-merged",
+        "box_xyxy": [
+          0.0,
+          257.0,
+          640.0,
+          427.0
+        ]
+      },
+      {
+        "entity_index": 10,
+        "segment_id": 4802889,
+        "label_id": 129,
+        "label": "building-other-merged",
+        "box_xyxy": [
+          0.0,
+          0.0,
+          640.0,
+          272.0
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject_entity_index": 0,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 21,
+        "predicate": "holding",
+        "object_entity_index": 7,
+        "object_label_id": 26,
+        "object_label": "handbag"
+      },
+      {
+        "subject_entity_index": 0,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 11,
+        "predicate": "walking on",
+        "object_entity_index": 9,
+        "object_label_id": 123,
+        "object_label": "pavement-merged"
+      },
+      {
+        "subject_entity_index": 1,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 2,
+        "predicate": "beside",
+        "object_entity_index": 2,
+        "object_label_id": 0,
+        "object_label": "person"
+      },
+      {
+        "subject_entity_index": 2,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 11,
+        "predicate": "walking on",
+        "object_entity_index": 9,
+        "object_label_id": 123,
+        "object_label": "pavement-merged"
+      },
+      {
+        "subject_entity_index": 3,
+        "subject_label_id": 5,
+        "subject_label": "bus",
+        "predicate_id": 3,
+        "predicate": "on",
+        "object_entity_index": 9,
+        "object_label_id": 123,
+        "object_label": "pavement-merged"
+      },
+      {
+        "subject_entity_index": 3,
+        "subject_label_id": 5,
+        "subject_label": "bus",
+        "predicate_id": 47,
+        "predicate": "parked on",
+        "object_entity_index": 9,
+        "object_label_id": 123,
+        "object_label": "pavement-merged"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "query_index": 58,
+      "score": 0.7327805757522583,
+      "subject_score": 0.8927907943725586,
+      "object_score": 0.9223446249961853,
+      "predicate_score": 0.477836012840271,
+      "subject_label_id": 5,
+      "subject_label": "bus",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        50.46875,
+        93.75,
+        607.5,
+        342.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        272.75,
+        640.0,
+        427.75
+      ]
+    },
+    {
+      "query_index": 30,
+      "score": 0.7305701375007629,
+      "subject_score": 0.875294029712677,
+      "object_score": 0.9036466479301453,
+      "predicate_score": 0.492984414100647,
+      "subject_label_id": 5,
+      "subject_label": "bus",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        55.78125,
+        94.125,
+        607.0,
+        339.75
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        280.75,
+        640.0,
+        427.75
+      ]
+    },
+    {
+      "query_index": 19,
+      "score": 0.7087807059288025,
+      "subject_score": 0.8705675601959229,
+      "object_score": 0.9219569563865662,
+      "predicate_score": 0.443631649017334,
+      "subject_label_id": 5,
+      "subject_label": "bus",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        50.9375,
+        94.0625,
+        613.5,
+        341.75
+      ],
+      "object_box_xyxy": [
+        0.0,
+        284.75,
+        640.0,
+        428.25
+      ]
+    },
+    {
+      "query_index": 16,
+      "score": 0.6981840133666992,
+      "subject_score": 0.856784999370575,
+      "object_score": 0.8820735812187195,
+      "predicate_score": 0.45033225417137146,
+      "subject_label_id": 5,
+      "subject_label": "bus",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        53.4375,
+        92.375,
+        606.0,
+        340.5
+      ],
+      "object_box_xyxy": [
+        -0.3125,
+        287.5,
+        639.5,
+        427.75
+      ]
+    },
+    {
+      "query_index": 77,
+      "score": 0.6969777941703796,
+      "subject_score": 0.842716634273529,
+      "object_score": 0.9346086382865906,
+      "predicate_score": 0.4298783242702484,
+      "subject_label_id": 5,
+      "subject_label": "bus",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        50.9375,
+        94.25,
+        611.5,
+        339.5
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        286.5,
+        640.0,
+        428.25
+      ]
+    },
+    {
+      "query_index": 6,
+      "score": 0.6752527356147766,
+      "subject_score": 0.8130367398262024,
+      "object_score": 0.8313896059989929,
+      "predicate_score": 0.45549577474594116,
+      "subject_label_id": 5,
+      "subject_label": "bus",
+      "predicate_id": 47,
+      "predicate": "parked on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        55.625,
+        92.375,
+        608.0,
+        341.75
+      ],
+      "object_box_xyxy": [
+        -0.46875,
+        280.5,
+        639.5,
+        427.5
+      ]
+    },
+    {
+      "query_index": 48,
+      "score": 0.6690358519554138,
+      "subject_score": 0.9768837094306946,
+      "object_score": 0.8862078785896301,
+      "predicate_score": 0.3459152579307556,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 45,
+      "predicate": "driving",
+      "object_label_id": 5,
+      "object_label": "bus",
+      "subject_box_xyxy": [
+        366.25,
+        207.75,
+        391.25,
+        240.625
+      ],
+      "object_box_xyxy": [
+        92.8125,
+        83.0625,
+        548.5,
+        348.5
+      ]
+    },
+    {
+      "query_index": 72,
+      "score": 0.6661173701286316,
+      "subject_score": 0.9900327920913696,
+      "object_score": 0.7165535092353821,
+      "predicate_score": 0.41663336753845215,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        -0.302734375,
+        223.5,
+        24.875,
+        311.5
+      ],
+      "object_box_xyxy": [
+        0.0,
+        272.5,
+        640.0,
+        429.5
+      ]
+    },
+    {
+      "query_index": 90,
+      "score": 0.6633674502372742,
+      "subject_score": 0.9925022125244141,
+      "object_score": 0.6911085844039917,
+      "predicate_score": 0.42558348178863525,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 11,
+      "predicate": "walking on",
+      "object_label_id": 123,
+      "object_label": "pavement-merged",
+      "subject_box_xyxy": [
+        19.5,
+        221.375,
+        44.8125,
+        301.5
+      ],
+      "object_box_xyxy": [
+        -0.78125,
+        257.75,
+        639.0,
+        429.0
+      ]
+    },
+    {
+      "query_index": 10,
+      "score": 0.6563160419464111,
+      "subject_score": 0.9734770059585571,
+      "object_score": 0.8927266001701355,
+      "predicate_score": 0.32530808448791504,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 45,
+      "predicate": "driving",
+      "object_label_id": 5,
+      "object_label": "bus",
+      "subject_box_xyxy": [
+        367.25,
+        207.0,
+        392.75,
+        239.5
+      ],
+      "object_box_xyxy": [
+        42.8125,
+        70.6875,
+        595.0,
+        359.25
+      ]
+    },
+    {
+      "query_index": 96,
+      "score": 0.6562978625297546,
+      "subject_score": 0.956480860710144,
+      "object_score": 0.7453004717826843,
+      "predicate_score": 0.3965475857257843,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 11,
+      "predicate": "walking on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        3.173828125,
+        233.5,
+        30.125,
+        304.0
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        285.5,
+        640.0,
+        429.0
+      ]
+    },
+    {
+      "query_index": 47,
+      "score": 0.6511096358299255,
+      "subject_score": 0.9753026366233826,
+      "object_score": 0.9053585529327393,
+      "predicate_score": 0.31260961294174194,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 4,
+      "predicate": "in",
+      "object_label_id": 5,
+      "object_label": "bus",
+      "subject_box_xyxy": [
+        365.25,
+        207.0,
+        391.0,
+        239.125
+      ],
+      "object_box_xyxy": [
+        0.3125,
+        76.125,
+        637.5,
+        359.25
+      ]
+    },
+    {
+      "query_index": 25,
+      "score": 0.6478179097175598,
+      "subject_score": 0.9948738217353821,
+      "object_score": 0.6902143359184265,
+      "predicate_score": 0.3959195911884308,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 11,
+      "predicate": "walking on",
+      "object_label_id": 123,
+      "object_label": "pavement-merged",
+      "subject_box_xyxy": [
+        28.125,
+        220.625,
+        49.9375,
+        296.5
+      ],
+      "object_box_xyxy": [
+        -0.625,
+        235.625,
+        639.5,
+        428.25
+      ]
+    },
+    {
+      "query_index": 95,
+      "score": 0.6388753056526184,
+      "subject_score": 0.8345823884010315,
+      "object_score": 0.9057920575141907,
+      "predicate_score": 0.34494560956954956,
+      "subject_label_id": 123,
+      "subject_label": "pavement-merged",
+      "predicate_id": 5,
+      "predicate": "attached to",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        0.3125,
+        271.75,
+        640.0,
+        328.5
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        289.75,
+        640.0,
+        428.25
+      ]
+    },
+    {
+      "query_index": 4,
+      "score": 0.6299851536750793,
+      "subject_score": 0.9738844037055969,
+      "object_score": 0.8920481204986572,
+      "predicate_score": 0.2878029942512512,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 45,
+      "predicate": "driving",
+      "object_label_id": 5,
+      "object_label": "bus",
+      "subject_box_xyxy": [
+        376.25,
+        208.75,
+        410.5,
+        244.375
+      ],
+      "object_box_xyxy": [
+        42.34375,
+        83.375,
+        595.5,
+        361.0
+      ]
+    },
+    {
+      "query_index": 42,
+      "score": 0.6294147372245789,
+      "subject_score": 0.9745330214500427,
+      "object_score": 0.893003523349762,
+      "predicate_score": 0.2865239977836609,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 4,
+      "predicate": "in",
+      "object_label_id": 5,
+      "object_label": "bus",
+      "subject_box_xyxy": [
+        367.0,
+        207.75,
+        392.5,
+        238.875
+      ],
+      "object_box_xyxy": [
+        -0.9375,
+        83.5,
+        638.5,
+        357.0
+      ]
+    },
+    {
+      "query_index": 84,
+      "score": 0.6288130283355713,
+      "subject_score": 0.8877699375152588,
+      "object_score": 0.5999202728271484,
+      "predicate_score": 0.46684277057647705,
+      "subject_label_id": 100,
+      "subject_label": "road",
+      "predicate_id": 5,
+      "predicate": "attached to",
+      "object_label_id": 123,
+      "object_label": "pavement-merged",
+      "subject_box_xyxy": [
+        -0.15625,
+        280.75,
+        640.0,
+        425.25
+      ],
+      "object_box_xyxy": [
+        41.25,
+        272.25,
+        503.5,
+        364.75
+      ]
+    },
+    {
+      "query_index": 73,
+      "score": 0.6274338364601135,
+      "subject_score": 0.9769272804260254,
+      "object_score": 0.8995509147644043,
+      "predicate_score": 0.28107088804244995,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 45,
+      "predicate": "driving",
+      "object_label_id": 5,
+      "object_label": "bus",
+      "subject_box_xyxy": [
+        334.0,
+        207.125,
+        362.25,
+        242.25
+      ],
+      "object_box_xyxy": [
+        2.03125,
+        102.375,
+        635.0,
+        354.25
+      ]
+    },
+    {
+      "query_index": 86,
+      "score": 0.6230283379554749,
+      "subject_score": 0.9829078316688538,
+      "object_score": 0.6395743489265442,
+      "predicate_score": 0.38469773530960083,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 11,
+      "predicate": "walking on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        26.015625,
+        224.375,
+        50.03125,
+        294.0
+      ],
+      "object_box_xyxy": [
+        -0.3125,
+        280.25,
+        639.5,
+        428.25
+      ]
+    },
+    {
+      "query_index": 91,
+      "score": 0.6225998401641846,
+      "subject_score": 0.9835652709007263,
+      "object_score": 0.4352547824382782,
+      "predicate_score": 0.5637418627738953,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 22,
+      "predicate": "carrying",
+      "object_label_id": 26,
+      "object_label": "handbag",
+      "subject_box_xyxy": [
+        -0.15625,
+        220.375,
+        25.15625,
+        315.0
+      ],
+      "object_box_xyxy": [
+        -0.537109375,
+        220.125,
+        27.625,
+        259.25
+      ]
+    }
+  ]
+}

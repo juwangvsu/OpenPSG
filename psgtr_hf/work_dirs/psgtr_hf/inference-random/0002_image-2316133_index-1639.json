@@ -1,0 +1,833 @@
+{
+  "dataset_index": 1639,
+  "image_id": 2316133,
+  "file_name": "/data/jwang/datasets/coco/train2017/000000364590.jpg",
+  "panoptic_file_name": "/data/jwang/datasets/coco/panoptic_train2017/000000364590.png",
+  "original_size": [
+    333,
+    500
+  ],
+  "visualization": "0002_image-2316133_index-1639.png",
+  "ground_truth": {
+    "entities": [
+      {
+        "entity_index": 0,
+        "segment_id": 3815999,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          38.0,
+          169.0,
+          54.0,
+          217.0
+        ]
+      },
+      {
+        "entity_index": 1,
+        "segment_id": 8750222,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          65.0,
+          173.0,
+          76.0,
+          207.0
+        ]
+      },
+      {
+        "entity_index": 2,
+        "segment_id": 8758969,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          72.0,
+          169.0,
+          81.0,
+          205.0
+        ]
+      },
+      {
+        "entity_index": 3,
+        "segment_id": 6315117,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          1.0,
+          100.0,
+          148.0,
+          318.0
+        ]
+      },
+      {
+        "entity_index": 4,
+        "segment_id": 6913694,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          11.0,
+          84.0,
+          353.0,
+          333.0
+        ]
+      },
+      {
+        "entity_index": 5,
+        "segment_id": 9404296,
+        "label_id": 0,
+        "label": "person",
+        "box_xyxy": [
+          84.0,
+          168.0,
+          97.0,
+          208.0
+        ]
+      },
+      {
+        "entity_index": 6,
+        "segment_id": 3754853,
+        "label_id": 16,
+        "label": "dog",
+        "box_xyxy": [
+          213.0,
+          137.0,
+          267.0,
+          190.0
+        ]
+      },
+      {
+        "entity_index": 7,
+        "segment_id": 5222509,
+        "label_id": 25,
+        "label": "umbrella",
+        "box_xyxy": [
+          151.0,
+          1.0,
+          499.0,
+          193.0
+        ]
+      },
+      {
+        "entity_index": 8,
+        "segment_id": 11507594,
+        "label_id": 26,
+        "label": "handbag",
+        "box_xyxy": [
+          396.0,
+          277.0,
+          471.0,
+          329.0
+        ]
+      },
+      {
+        "entity_index": 9,
+        "segment_id": 5993073,
+        "label_id": 39,
+        "label": "bottle",
+        "box_xyxy": [
+          354.0,
+          297.0,
+          391.0,
+          313.0
+        ]
+      },
+      {
+        "entity_index": 10,
+        "segment_id": 5464672,
+        "label_id": 57,
+        "label": "couch",
+        "box_xyxy": [
+          338.0,
+          185.0,
+          495.0,
+          327.0
+        ]
+      },
+      {
+        "entity_index": 11,
+        "segment_id": 11382199,
+        "label_id": 74,
+        "label": "clock",
+        "box_xyxy": [
+          107.0,
+          175.0,
+          117.0,
+          186.0
+        ]
+      },
+      {
+        "entity_index": 12,
+        "segment_id": 7107454,
+        "label_id": 100,
+        "label": "road",
+        "box_xyxy": [
+          45.0,
+          221.0,
+          77.0,
+          262.0
+        ]
+      },
+      {
+        "entity_index": 13,
+        "segment_id": 3565664,
+        "label_id": 116,
+        "label": "tree-merged",
+        "box_xyxy": [
+          165.0,
+          139.0,
+          237.0,
+          180.0
+        ]
+      },
+      {
+        "entity_index": 14,
+        "segment_id": 12550744,
+        "label_id": 119,
+        "label": "sky-other-merged",
+        "box_xyxy": [
+          0.0,
+          0.0,
+          500.0,
+          171.0
+        ]
+      },
+      {
+        "entity_index": 15,
+        "segment_id": 12895944,
+        "label_id": 123,
+        "label": "pavement-merged",
+        "box_xyxy": [
+          51.0,
+          206.0,
+          91.0,
+          233.0
+        ]
+      },
+      {
+        "entity_index": 16,
+        "segment_id": 6316648,
+        "label_id": 129,
+        "label": "building-other-merged",
+        "box_xyxy": [
+          0.0,
+          78.0,
+          198.0,
+          231.0
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject_entity_index": 0,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 14,
+        "predicate": "standing on",
+        "object_entity_index": 12,
+        "object_label_id": 100,
+        "object_label": "road"
+      },
+      {
+        "subject_entity_index": 3,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 14,
+        "predicate": "standing on",
+        "object_entity_index": 12,
+        "object_label_id": 100,
+        "object_label": "road"
+      },
+      {
+        "subject_entity_index": 4,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 21,
+        "predicate": "holding",
+        "object_entity_index": 6,
+        "object_label_id": 16,
+        "object_label": "dog"
+      },
+      {
+        "subject_entity_index": 4,
+        "subject_label_id": 0,
+        "subject_label": "person",
+        "predicate_id": 16,
+        "predicate": "sitting on",
+        "object_entity_index": 10,
+        "object_label_id": 57,
+        "object_label": "couch"
+      },
+      {
+        "subject_entity_index": 6,
+        "subject_label_id": 16,
+        "subject_label": "dog",
+        "predicate_id": 15,
+        "predicate": "lying on",
+        "object_entity_index": 4,
+        "object_label_id": 0,
+        "object_label": "person"
+      },
+      {
+        "subject_entity_index": 7,
+        "subject_label_id": 25,
+        "subject_label": "umbrella",
+        "predicate_id": 0,
+        "predicate": "over",
+        "object_entity_index": 4,
+        "object_label_id": 0,
+        "object_label": "person"
+      },
+      {
+        "subject_entity_index": 8,
+        "subject_label_id": 26,
+        "subject_label": "handbag",
+        "predicate_id": 2,
+        "predicate": "beside",
+        "object_entity_index": 9,
+        "object_label_id": 39,
+        "object_label": "bottle"
+      },
+      {
+        "subject_entity_index": 9,
+        "subject_label_id": 39,
+        "subject_label": "bottle",
+        "predicate_id": 3,
+        "predicate": "on",
+        "object_entity_index": 10,
+        "object_label_id": 57,
+        "object_label": "couch"
+      },
+      {
+        "subject_entity_index": 14,
+        "subject_label_id": 119,
+        "subject_label": "sky-other-merged",
+        "predicate_id": 0,
+        "predicate": "over",
+        "object_entity_index": 13,
+        "object_label_id": 116,
+        "object_label": "tree-merged"
+      },
+      {
+        "subject_entity_index": 16,
+        "subject_label_id": 129,
+        "subject_label": "building-other-merged",
+        "predicate_id": 2,
+        "predicate": "beside",
+        "object_entity_index": 12,
+        "object_label_id": 100,
+        "object_label": "road"
+      },
+      {
+        "subject_entity_index": 16,
+        "subject_label_id": 129,
+        "subject_label": "building-other-merged",
+        "predicate_id": 2,
+        "predicate": "beside",
+        "object_entity_index": 13,
+        "object_label_id": 116,
+        "object_label": "tree-merged"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "query_index": 89,
+      "score": 0.9250551462173462,
+      "subject_score": 0.9976047277450562,
+      "object_score": 0.8415743112564087,
+      "predicate_score": 0.9428701996803284,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        0.732421875,
+        -0.81298828125,
+        501.0,
+        182.75
+      ],
+      "object_box_xyxy": [
+        76.8125,
+        27.5625,
+        421.5,
+        318.25
+      ]
+    },
+    {
+      "query_index": 0,
+      "score": 0.9192842245101929,
+      "subject_score": 0.9985544085502625,
+      "object_score": 0.8311209082603455,
+      "predicate_score": 0.9360811710357666,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        0.9765625,
+        -0.5693359375,
+        501.0,
+        180.5
+      ],
+      "object_box_xyxy": [
+        45.28125,
+        69.5,
+        199.875,
+        254.25
+      ]
+    },
+    {
+      "query_index": 35,
+      "score": 0.844806969165802,
+      "subject_score": 0.9974976181983948,
+      "object_score": 0.6671547889709473,
+      "predicate_score": 0.9060120582580566,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 129,
+      "object_label": "building-other-merged",
+      "subject_box_xyxy": [
+        -0.48828125,
+        -0.16259765625,
+        499.5,
+        182.375
+      ],
+      "object_box_xyxy": [
+        23.078125,
+        97.25,
+        158.375,
+        203.625
+      ]
+    },
+    {
+      "query_index": 66,
+      "score": 0.8437353372573853,
+      "subject_score": 0.9980788230895996,
+      "object_score": 0.6576058268547058,
+      "predicate_score": 0.9151415228843689,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        0.732421875,
+        -0.5693359375,
+        501.0,
+        183.125
+      ],
+      "object_box_xyxy": [
+        300.75,
+        106.8125,
+        444.25,
+        253.875
+      ]
+    },
+    {
+      "query_index": 99,
+      "score": 0.8096200823783875,
+      "subject_score": 0.9981864094734192,
+      "object_score": 0.5671255588531494,
+      "predicate_score": 0.9374604821205139,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 129,
+      "object_label": "building-other-merged",
+      "subject_box_xyxy": [
+        -0.3662109375,
+        -0.243896484375,
+        499.5,
+        180.75
+      ],
+      "object_box_xyxy": [
+        -9.9453125,
+        68.375,
+        142.125,
+        229.25
+      ]
+    },
+    {
+      "query_index": 49,
+      "score": 0.7897538542747498,
+      "subject_score": 0.9981232285499573,
+      "object_score": 0.5059334635734558,
+      "predicate_score": 0.9754335880279541,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 116,
+      "object_label": "tree-merged",
+      "subject_box_xyxy": [
+        0.732421875,
+        -0.406494140625,
+        501.0,
+        180.125
+      ],
+      "object_box_xyxy": [
+        49.6875,
+        5.0390625,
+        448.75,
+        249.375
+      ]
+    },
+    {
+      "query_index": 37,
+      "score": 0.7575764656066895,
+      "subject_score": 0.9819853901863098,
+      "object_score": 0.8238138556480408,
+      "predicate_score": 0.5374590158462524,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        0.67138671875,
+        101.125,
+        90.1875,
+        327.25
+      ],
+      "object_box_xyxy": [
+        126.5625,
+        106.0,
+        217.375,
+        319.0
+      ]
+    },
+    {
+      "query_index": 5,
+      "score": 0.7372535467147827,
+      "subject_score": 0.9066604971885681,
+      "object_score": 0.7487528324127197,
+      "predicate_score": 0.590292751789093,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 129,
+      "object_label": "building-other-merged",
+      "subject_box_xyxy": [
+        0.152587890625,
+        20.203125,
+        104.375,
+        178.25
+      ],
+      "object_box_xyxy": [
+        -0.244140625,
+        74.1875,
+        126.0,
+        231.375
+      ]
+    },
+    {
+      "query_index": 50,
+      "score": 0.7325048446655273,
+      "subject_score": 0.9604306817054749,
+      "object_score": 0.841452956199646,
+      "predicate_score": 0.48633506894111633,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        0.0762939453125,
+        104.0,
+        53.21875,
+        330.5
+      ],
+      "object_box_xyxy": [
+        2.2890625,
+        111.8125,
+        77.875,
+        315.75
+      ]
+    },
+    {
+      "query_index": 85,
+      "score": 0.7002526521682739,
+      "subject_score": 0.9547390937805176,
+      "object_score": 0.7868306040763855,
+      "predicate_score": 0.4570865035057068,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        39.96875,
+        179.0,
+        57.25,
+        233.625
+      ],
+      "object_box_xyxy": [
+        31.125,
+        64.125,
+        238.875,
+        304.5
+      ]
+    },
+    {
+      "query_index": 52,
+      "score": 0.6823336482048035,
+      "subject_score": 0.9976315498352051,
+      "object_score": 0.34516942501068115,
+      "predicate_score": 0.922545850276947,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 116,
+      "object_label": "tree-merged",
+      "subject_box_xyxy": [
+        0.732421875,
+        -0.5693359375,
+        501.0,
+        181.125
+      ],
+      "object_box_xyxy": [
+        189.125,
+        25.125,
+        435.5,
+        261.25
+      ]
+    },
+    {
+      "query_index": 32,
+      "score": 0.6699531674385071,
+      "subject_score": 0.993678867816925,
+      "object_score": 0.3424730598926544,
+      "predicate_score": 0.8836104273796082,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        0.732421875,
+        -0.243896484375,
+        501.0,
+        184.0
+      ],
+      "object_box_xyxy": [
+        324.0,
+        143.125,
+        491.0,
+        302.5
+      ]
+    },
+    {
+      "query_index": 34,
+      "score": 0.6541096568107605,
+      "subject_score": 0.980480968952179,
+      "object_score": 0.7681502103805542,
+      "predicate_score": 0.37159204483032227,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        38.53125,
+        176.375,
+        54.0,
+        225.875
+      ],
+      "object_box_xyxy": [
+        30.640625,
+        161.5,
+        68.3125,
+        244.0
+      ]
+    },
+    {
+      "query_index": 18,
+      "score": 0.6156874299049377,
+      "subject_score": 0.9798703193664551,
+      "object_score": 0.6652168035507202,
+      "predicate_score": 0.35805442929267883,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        11.71875,
+        92.0,
+        351.75,
+        328.5
+      ],
+      "object_box_xyxy": [
+        18.0,
+        108.9375,
+        212.625,
+        323.5
+      ]
+    },
+    {
+      "query_index": 31,
+      "score": 0.604032039642334,
+      "subject_score": 0.995019793510437,
+      "object_score": 0.6860103607177734,
+      "predicate_score": 0.3228624761104584,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        216.125,
+        94.9375,
+        352.25,
+        304.0
+      ],
+      "object_box_xyxy": [
+        45.96875,
+        77.375,
+        280.25,
+        303.75
+      ]
+    },
+    {
+      "query_index": 91,
+      "score": 0.5894867181777954,
+      "subject_score": 0.9862019419670105,
+      "object_score": 0.5189347863197327,
+      "predicate_score": 0.40026116371154785,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        0.35107421875,
+        103.875,
+        57.125,
+        330.0
+      ],
+      "object_box_xyxy": [
+        -2.47265625,
+        169.0,
+        68.75,
+        331.75
+      ]
+    },
+    {
+      "query_index": 9,
+      "score": 0.5862940549850464,
+      "subject_score": 0.9861246943473816,
+      "object_score": 0.6668164730072021,
+      "predicate_score": 0.3064843714237213,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 11,
+      "predicate": "walking on",
+      "object_label_id": 123,
+      "object_label": "pavement-merged",
+      "subject_box_xyxy": [
+        75.0625,
+        167.375,
+        88.5,
+        206.625
+      ],
+      "object_box_xyxy": [
+        27.796875,
+        195.5,
+        125.25,
+        307.25
+      ]
+    },
+    {
+      "query_index": 94,
+      "score": 0.5850141644477844,
+      "subject_score": 0.9903621673583984,
+      "object_score": 0.6134244203567505,
+      "predicate_score": 0.3295672535896301,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 123,
+      "object_label": "pavement-merged",
+      "subject_box_xyxy": [
+        41.1875,
+        172.0,
+        57.25,
+        226.0
+      ],
+      "object_box_xyxy": [
+        10.46875,
+        204.375,
+        109.5,
+        332.25
+      ]
+    },
+    {
+      "query_index": 69,
+      "score": 0.5791820883750916,
+      "subject_score": 0.9945335388183594,
+      "object_score": 0.21049094200134277,
+      "predicate_score": 0.9280952215194702,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 123,
+      "object_label": "pavement-merged",
+      "subject_box_xyxy": [
+        1.3427734375,
+        -0.081298828125,
+        501.0,
+        177.875
+      ],
+      "object_box_xyxy": [
+        157.5,
+        215.125,
+        300.25,
+        325.25
+      ]
+    },
+    {
+      "query_index": 64,
+      "score": 0.5472790598869324,
+      "subject_score": 0.9635844826698303,
+      "object_score": 0.3646787106990814,
+      "predicate_score": 0.4664727747440338,
+      "subject_label_id": 116,
+      "subject_label": "tree-merged",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        159.375,
+        1.3818359375,
+        499.75,
+        272.25
+      ],
+      "object_box_xyxy": [
+        126.4375,
+        92.4375,
+        300.75,
+        289.75
+      ]
+    }
+  ]
+}
