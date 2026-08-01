@@ -256,3 +256,59 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --standalone --nproc-per-node=4 \
   --gradient-accumulation-steps 2 \
   --amp
 ```
+
+## Checkpoint inference and visualization
+
+Run a checkpoint on a reproducible random sample from the training split:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 psgtr-infer \
+  --checkpoint work_dirs/psgtr_hf \
+  --data-root /data/jwang/datasets/coco \
+  --annotation-file /data/jwang/datasets/psg/psg_train_val.json \
+  --split train \
+  --random-count 8 \
+  --seed 42 \
+  --output-dir work_dirs/psgtr_hf/inference-random
+```
+
+`--checkpoint` may point directly to `checkpoint-XXXX`, or to the training
+output directory containing `last_checkpoint`.
+
+Run specific dataset indices:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 psgtr-infer \
+  --checkpoint work_dirs/psgtr_hf/checkpoint-0010 \
+  --data-root /data/jwang/datasets/coco \
+  --annotation-file /data/jwang/datasets/psg/psg_train_val.json \
+  --split train \
+  --indices 0 17 200 991 \
+  --output-dir work_dirs/psgtr_hf/inference-indices
+```
+
+Run specific OpenPSG/COCO image IDs:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 psgtr-infer \
+  --checkpoint work_dirs/psgtr_hf \
+  --data-root /data/jwang/datasets/coco \
+  --annotation-file /data/jwang/datasets/psg/psg_train_val.json \
+  --split train \
+  --image-ids 397133 37777 252219 \
+  --score-threshold 0.2 \
+  --top-k 20 \
+  --output-dir work_dirs/psgtr_hf/inference-image-ids
+```
+
+The equivalent source-tree command is `python examples/infer.py` with the
+same arguments. Inference uses deterministic evaluation resizing and does not
+apply training crops or flips. The output directory receives:
+
+- One side-by-side PNG per sample, with ground truth on the left and predictions
+  on the right.
+- One JSON file per sample containing labels, scores, boxes, and triplets.
+- `results.json`, a consolidated manifest for the complete run.
+
+Dataset indices refer to the selected split after relation-empty records have
+been filtered. Use `--image-ids` when stable identifiers are preferred.

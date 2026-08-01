@@ -374,7 +374,14 @@ class OpenPsgDataset(Dataset[dict[str, Any]]):
             return torch.empty((0, 3), dtype=torch.long)
         return torch.tensor(relations, dtype=torch.long)
 
-    def __getitem__(self, index: int) -> dict[str, Any]:
+    def load_raw_sample(self, index: int) -> dict[str, Any]:
+        """Load one image and its original-resolution panoptic annotations.
+
+        This public method is useful for deterministic inference and
+        visualization. It performs no resizing, cropping, flipping, or image
+        normalization.
+        """
+
         sample = self.samples[index]
         image_path = self._resolve_file(sample["file_name"], self.image_roots)
         panoptic_path = self._resolve_file(
@@ -411,25 +418,45 @@ class OpenPsgDataset(Dataset[dict[str, Any]]):
         ):
             raise ValueError(f"Invalid relation in image_id={sample['image_id']}")
 
-        original_size = torch.tensor([image.height, image.width], dtype=torch.long)
+        return {
+            "image": image,
+            "image_id": int(sample["image_id"]),
+            "image_path": image_path,
+            "panoptic_path": panoptic_path,
+            "class_labels": class_labels,
+            "masks": masks,
+            "relations": relations,
+            "segment_ids": segment_ids,
+            "original_size": torch.tensor(
+                [image.height, image.width],
+                dtype=torch.long,
+            ),
+        }
+
+    def prepare_raw_sample(self, raw: dict[str, Any]) -> dict[str, Any]:
+        """Apply this dataset's transforms to a result of ``load_raw_sample``."""
+
         pixel_values, target = self.transforms(
-            image,
-            class_labels,
-            masks,
-            relations,
-            segment_ids,
+            raw["image"],
+            raw["class_labels"],
+            raw["masks"],
+            raw["relations"],
+            raw["segment_ids"],
         )
         if self.split == "train" and target["relations"].numel() == 0:
             raise RuntimeError(
-                f"Training transform removed every relation for image_id={sample['image_id']}"
+                f"Training transform removed every relation for image_id={raw['image_id']}"
             )
-        target["image_id"] = torch.tensor(int(sample["image_id"]), dtype=torch.long)
-        target["original_size"] = original_size
+        target["image_id"] = torch.tensor(raw["image_id"], dtype=torch.long)
+        target["original_size"] = raw["original_size"]
         return {
             "pixel_values": pixel_values,
             "target": target,
-            "image_id": int(sample["image_id"]),
+            "image_id": raw["image_id"],
         }
+
+    def __getitem__(self, index: int) -> dict[str, Any]:
+        return self.prepare_raw_sample(self.load_raw_sample(index))
 
 
 class PsgCollator:
