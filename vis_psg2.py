@@ -33,15 +33,19 @@ with open(JSON_PATH, "r") as f:
 category_map = {cat["id"]: cat["name"] for cat in psg_data["categories"]}
 image_map = {img["id"]: img for img in psg_data["images"]}
 
-# Find an annotation entry that contains relationship edges
+# Find the first 50 annotation entry that contains relationship edges
+target_anns = [] 
 target_ann = None
 for ann in psg_data["annotations"]:
     if len(ann.get("relations", [])) > 0:
-        target_ann = ann
+        target_anns.append(ann)
+    if len(target_anns) ==50:
         break
 
-if not target_ann:
+if len(target_anns) ==0:
     raise ValueError("No valid annotations with scene graph relations found.")
+
+target_ann = target_anns[2]
 
 # 2. Extract Reference Files
 image_meta = image_map[target_ann["image_id"]]
@@ -65,7 +69,9 @@ pan_id_map = (
 # 3. Parse the first relation edge
 segments = target_ann["segments_info"]
 s_idx, o_idx, pred_id = target_ann["relations"][0]
+relations = target_ann["relations"]
 
+print(f"relation dataset seg # {len(segments)}, relations # {len(relations)} ")
 sub_seg = segments[s_idx]
 obj_seg = segments[o_idx]
 
