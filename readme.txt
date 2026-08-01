@@ -26,6 +26,9 @@ torchrun \
    --launcher pytorch
 
 
+paper:
+	https://github.com/zhiqi-li/Panoptic-SegFormer
+	also use mmdv...
 runs now...
 
 [rank0]: FileNotFoundError: [Errno 2] No such file or directory: './data/psg/processed//psg_tra.json'
