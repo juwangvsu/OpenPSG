@@ -23,5 +23,13 @@ pip install timm --break-system-packages
 docker commit gpu-ref4 jwang3vsu/psgtr:cuda12
 torch: 2.5.1+cu121 transformers: 5.14.1 huggingface-hub: 1.26.0
 
+train:
 CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun   --standalone   --nproc-per-node=4   examples/train.py   --data-root /data/jwang/datasets/coco   --annotation-file /data/jwang/datasets/psg/psg_train_val.json   --output-dir work_dirs/psgtr_hf   --batch-size 1   --gradient-accumulation-steps 2   --num-workers 2   --amp
+
+
+infer:`
+CUDA_VISIBLE_DEVICES=0 python3 examples/infer.py   --checkpoint work_dirs/psgtr_hf   --data-root /data/jwang/datasets/coco   --annotation-file /data/jwang/datasets/psg/psg_train_val.json   --split train   --random-count 8   --seed 42   --output-dir work_dirs/psgtr_hf/inference-random
+
+result:
+work_dirs/psgtr_hf/inference-random/0001_image-2329401_index-7296.png
 
