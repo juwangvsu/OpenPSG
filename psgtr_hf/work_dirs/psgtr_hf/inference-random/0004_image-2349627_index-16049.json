@@ -478,111 +478,11 @@
   },
   "predictions": [
     {
-      "query_index": 53,
-      "score": 0.8323430418968201,
-      "subject_score": 0.978438675403595,
-      "object_score": 0.9712597131729126,
-      "predicate_score": 0.6067895293235779,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 2,
-      "predicate": "beside",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        451.0,
-        242.0,
-        535.5,
-        348.75
-      ],
-      "object_box_xyxy": [
-        437.5,
-        228.0,
-        544.5,
-        375.0
-      ]
-    },
-    {
-      "query_index": 2,
-      "score": 0.8054754137992859,
-      "subject_score": 0.9731742143630981,
-      "object_score": 0.9391368627548218,
-      "predicate_score": 0.5717911720275879,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 2,
-      "predicate": "beside",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        400.5,
-        307.25,
-        507.5,
-        423.25
-      ],
-      "object_box_xyxy": [
-        364.5,
-        285.0,
-        475.0,
-        424.75
-      ]
-    },
-    {
-      "query_index": 85,
-      "score": 0.7874928712844849,
-      "subject_score": 0.9673056602478027,
-      "object_score": 0.9352602362632751,
-      "predicate_score": 0.5398135185241699,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 2,
-      "predicate": "beside",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        537.5,
-        243.25,
-        614.0,
-        373.75
-      ],
-      "object_box_xyxy": [
-        526.0,
-        232.75,
-        607.0,
-        365.5
-      ]
-    },
-    {
-      "query_index": 22,
-      "score": 0.780593752861023,
-      "subject_score": 0.9751169085502625,
-      "object_score": 0.9493252038955688,
-      "predicate_score": 0.5138111114501953,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 2,
-      "predicate": "beside",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        310.75,
-        77.6875,
-        368.0,
-        199.625
-      ],
-      "object_box_xyxy": [
-        300.75,
-        91.1875,
-        367.25,
-        217.0
-      ]
-    },
-    {
-      "query_index": 98,
-      "score": 0.778739333152771,
-      "subject_score": 0.9798961877822876,
-      "object_score": 0.8048065304756165,
-      "predicate_score": 0.5988317728042603,
+      "query_index": 27,
+      "score": 0.9290573596954346,
+      "subject_score": 0.9644941687583923,
+      "object_score": 0.9754869341850281,
+      "predicate_score": 0.8523275852203369,
       "subject_label_id": 0,
       "subject_label": "person",
       "predicate_id": 14,
@@ -590,74 +490,74 @@
       "object_label_id": 122,
       "object_label": "floor-other-merged",
       "subject_box_xyxy": [
-        597.0,
-        141.25,
-        639.5,
-        411.25
+        242.375,
+        0.8798828125,
+        325.5,
+        135.0
+      ],
+      "object_box_xyxy": [
+        0.3125,
+        0.20703125,
+        640.0,
+        424.0
+      ]
+    },
+    {
+      "query_index": 50,
+      "score": 0.8848727941513062,
+      "subject_score": 0.9819716811180115,
+      "object_score": 0.899683952331543,
+      "predicate_score": 0.7842483520507812,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        12.3828125,
+        43.6875,
+        78.0625,
+        234.125
+      ],
+      "object_box_xyxy": [
+        0.3125,
+        0.20703125,
+        640.0,
+        424.0
+      ]
+    },
+    {
+      "query_index": 92,
+      "score": 0.8702302575111389,
+      "subject_score": 0.9775586724281311,
+      "object_score": 0.9570412039756775,
+      "predicate_score": 0.7044157981872559,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        65.75,
+        263.25,
+        181.25,
+        400.75
       ],
       "object_box_xyxy": [
         0.0,
-        -0.4140625,
+        0.20703125,
         640.0,
-        423.5
+        424.0
       ]
     },
     {
       "query_index": 78,
-      "score": 0.7742518782615662,
-      "subject_score": 0.9897786974906921,
-      "object_score": 0.7534312605857849,
-      "predicate_score": 0.6223934888839722,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 16,
-      "predicate": "sitting on",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        307.0,
-        249.875,
-        391.0,
-        336.5
-      ],
-      "object_box_xyxy": [
-        226.875,
-        203.875,
-        445.5,
-        420.75
-      ]
-    },
-    {
-      "query_index": 31,
-      "score": 0.7651187181472778,
-      "subject_score": 0.993768572807312,
-      "object_score": 0.9777641296386719,
-      "predicate_score": 0.4609641432762146,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 2,
-      "predicate": "beside",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        424.5,
-        112.625,
-        482.0,
-        254.0
-      ],
-      "object_box_xyxy": [
-        389.75,
-        90.625,
-        476.0,
-        280.0
-      ]
-    },
-    {
-      "query_index": 76,
-      "score": 0.7508840560913086,
-      "subject_score": 0.9779219627380371,
-      "object_score": 0.6641572117805481,
-      "predicate_score": 0.6518438458442688,
+      "score": 0.8696200251579285,
+      "subject_score": 0.96314936876297,
+      "object_score": 0.9581725597381592,
+      "predicate_score": 0.7126088738441467,
       "subject_label_id": 0,
       "subject_label": "person",
       "predicate_id": 14,
@@ -665,199 +565,299 @@
       "object_label_id": 122,
       "object_label": "floor-other-merged",
       "subject_box_xyxy": [
-        421.0,
-        113.6875,
-        486.5,
-        257.0
+        216.875,
+        246.125,
+        374.0,
+        418.5
       ],
       "object_box_xyxy": [
-        -0.3125,
-        -1.44921875,
-        639.5,
-        422.5
-      ]
-    },
-    {
-      "query_index": 75,
-      "score": 0.7508115768432617,
-      "subject_score": 0.975023627281189,
-      "object_score": 0.9437419772148132,
-      "predicate_score": 0.4599646329879761,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 2,
-      "predicate": "beside",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        323.0,
-        178.0,
-        383.75,
-        287.75
-      ],
-      "object_box_xyxy": [
-        305.5,
-        195.375,
-        369.5,
-        304.0
-      ]
-    },
-    {
-      "query_index": 87,
-      "score": 0.747702956199646,
-      "subject_score": 0.9706131815910339,
-      "object_score": 0.944624125957489,
-      "predicate_score": 0.45591312646865845,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 2,
-      "predicate": "beside",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        362.75,
-        87.75,
-        439.75,
-        250.75
-      ],
-      "object_box_xyxy": [
-        351.0,
-        98.625,
-        421.5,
-        241.0
-      ]
-    },
-    {
-      "query_index": 42,
-      "score": 0.7440773844718933,
-      "subject_score": 0.9845481514930725,
-      "object_score": 0.8766444325447083,
-      "predicate_score": 0.4773026704788208,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 16,
-      "predicate": "sitting on",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        309.75,
-        250.125,
-        392.25,
-        335.0
-      ],
-      "object_box_xyxy": [
-        270.25,
-        222.5,
-        397.75,
-        386.0
-      ]
-    },
-    {
-      "query_index": 54,
-      "score": 0.7333076000213623,
-      "subject_score": 0.9755066633224487,
-      "object_score": 0.691051185131073,
-      "predicate_score": 0.584949254989624,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 14,
-      "predicate": "standing on",
-      "object_label_id": 122,
-      "object_label": "floor-other-merged",
-      "subject_box_xyxy": [
-        358.5,
-        87.125,
-        439.0,
-        237.625
-      ],
-      "object_box_xyxy": [
-        -0.46875,
-        -2.27734375,
-        639.5,
-        421.75
-      ]
-    },
-    {
-      "query_index": 89,
-      "score": 0.7256448268890381,
-      "subject_score": 0.9713498950004578,
-      "object_score": 0.697937548160553,
-      "predicate_score": 0.5636118054389954,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 14,
-      "predicate": "standing on",
-      "object_label_id": 122,
-      "object_label": "floor-other-merged",
-      "subject_box_xyxy": [
-        360.25,
-        84.25,
-        438.5,
-        197.75
-      ],
-      "object_box_xyxy": [
-        -0.46875,
-        -2.484375,
-        639.5,
-        421.5
-      ]
-    },
-    {
-      "query_index": 97,
-      "score": 0.7126778960227966,
-      "subject_score": 0.9637208580970764,
-      "object_score": 0.7499815225601196,
-      "predicate_score": 0.5008158087730408,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 14,
-      "predicate": "standing on",
-      "object_label_id": 122,
-      "object_label": "floor-other-merged",
-      "subject_box_xyxy": [
-        514.5,
-        123.1875,
-        599.0,
-        272.75
-      ],
-      "object_box_xyxy": [
-        -0.15625,
-        -0.517578125,
+        0.0,
+        0.20703125,
         640.0,
-        423.5
+        424.0
       ]
     },
     {
-      "query_index": 77,
-      "score": 0.7107657194137573,
-      "subject_score": 0.9832286834716797,
-      "object_score": 0.7158728241920471,
-      "predicate_score": 0.510139524936676,
+      "query_index": 93,
+      "score": 0.8466353416442871,
+      "subject_score": 0.9253351092338562,
+      "object_score": 0.9617005586624146,
+      "predicate_score": 0.681946337223053,
       "subject_label_id": 0,
       "subject_label": "person",
-      "predicate_id": 14,
-      "predicate": "standing on",
-      "object_label_id": 122,
-      "object_label": "floor-other-merged",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
       "subject_box_xyxy": [
-        205.125,
-        219.0,
-        310.75,
-        417.0
+        494.75,
+        376.5,
+        562.0,
+        423.5
       ],
       "object_box_xyxy": [
-        0.625,
-        -1.966796875,
-        640.5,
+        395.25,
+        298.0,
+        491.0,
         422.0
       ]
     },
     {
+      "query_index": 4,
+      "score": 0.8404775261878967,
+      "subject_score": 0.9750251173973083,
+      "object_score": 0.9707189798355103,
+      "predicate_score": 0.6272909641265869,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        401.25,
+        296.75,
+        495.0,
+        423.5
+      ],
+      "object_box_xyxy": [
+        447.25,
+        262.0,
+        544.0,
+        392.75
+      ]
+    },
+    {
+      "query_index": 47,
+      "score": 0.8316202163696289,
+      "subject_score": 0.9415894150733948,
+      "object_score": 0.9395254254341125,
+      "predicate_score": 0.6501372456550598,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 16,
+      "predicate": "sitting on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        308.5,
+        255.25,
+        388.5,
+        337.25
+      ],
+      "object_box_xyxy": [
+        0.0,
+        0.20703125,
+        640.0,
+        424.0
+      ]
+    },
+    {
+      "query_index": 86,
+      "score": 0.8205196261405945,
+      "subject_score": 0.9199685454368591,
+      "object_score": 0.9123455882072449,
+      "predicate_score": 0.6581646800041199,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        39.4375,
+        377.25,
+        152.875,
+        422.75
+      ],
+      "object_box_xyxy": [
+        64.75,
+        269.25,
+        183.75,
+        411.75
+      ]
+    },
+    {
+      "query_index": 58,
+      "score": 0.8151299953460693,
+      "subject_score": 0.9731051325798035,
+      "object_score": 0.9071328043937683,
+      "predicate_score": 0.613550066947937,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        398.5,
+        298.25,
+        496.0,
+        423.75
+      ],
+      "object_box_xyxy": [
+        0.3125,
+        0.4140625,
+        640.0,
+        424.5
+      ]
+    },
+    {
+      "query_index": 73,
+      "score": 0.8146775364875793,
+      "subject_score": 0.9710522890090942,
+      "object_score": 0.9735760688781738,
+      "predicate_score": 0.5719324946403503,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        198.25,
+        226.75,
+        311.75,
+        413.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        0.20703125,
+        640.0,
+        424.0
+      ]
+    },
+    {
+      "query_index": 76,
+      "score": 0.8098311424255371,
+      "subject_score": 0.9306098222732544,
+      "object_score": 0.9626712799072266,
+      "predicate_score": 0.5928404331207275,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 14,
+      "predicate": "standing on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        415.0,
+        116.75,
+        480.5,
+        257.75
+      ],
+      "object_box_xyxy": [
+        0.3125,
+        0.4140625,
+        640.0,
+        424.5
+      ]
+    },
+    {
+      "query_index": 2,
+      "score": 0.8019061088562012,
+      "subject_score": 0.9869654178619385,
+      "object_score": 0.9676508903503418,
+      "predicate_score": 0.5399455428123474,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        397.25,
+        299.0,
+        490.25,
+        423.5
+      ],
+      "object_box_xyxy": [
+        246.0,
+        243.875,
+        344.75,
+        408.25
+      ]
+    },
+    {
+      "query_index": 71,
+      "score": 0.799773633480072,
+      "subject_score": 0.9608503580093384,
+      "object_score": 0.9312901496887207,
+      "predicate_score": 0.571689784526825,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        522.0,
+        302.5,
+        598.5,
+        412.25
+      ],
+      "object_box_xyxy": [
+        420.5,
+        303.0,
+        512.0,
+        419.5
+      ]
+    },
+    {
+      "query_index": 6,
+      "score": 0.7873554229736328,
+      "subject_score": 0.9709423780441284,
+      "object_score": 0.9715811014175415,
+      "predicate_score": 0.5174161195755005,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 0,
+      "object_label": "person",
+      "subject_box_xyxy": [
+        202.75,
+        223.125,
+        310.25,
+        414.5
+      ],
+      "object_box_xyxy": [
+        60.8125,
+        254.25,
+        191.0,
+        408.75
+      ]
+    },
+    {
+      "query_index": 95,
+      "score": 0.7778933644294739,
+      "subject_score": 0.975559413433075,
+      "object_score": 0.8759979605674744,
+      "predicate_score": 0.5508120656013489,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 16,
+      "predicate": "sitting on",
+      "object_label_id": 122,
+      "object_label": "floor-other-merged",
+      "subject_box_xyxy": [
+        447.5,
+        242.375,
+        532.0,
+        358.0
+      ],
+      "object_box_xyxy": [
+        0.3125,
+        0.4140625,
+        640.0,
+        424.5
+      ]
+    },
+    {
       "query_index": 49,
-      "score": 0.7048665881156921,
-      "subject_score": 0.9750736355781555,
-      "object_score": 0.6856902837753296,
-      "predicate_score": 0.523787796497345,
+      "score": 0.7777581214904785,
+      "subject_score": 0.9206551909446716,
+      "object_score": 0.9409686923027039,
+      "predicate_score": 0.5430770516395569,
       "subject_label_id": 0,
       "subject_label": "person",
       "predicate_id": 14,
@@ -865,24 +865,24 @@
       "object_label_id": 122,
       "object_label": "floor-other-merged",
       "subject_box_xyxy": [
-        481.25,
-        0.1552734375,
-        552.5,
-        82.0
+        475.5,
+        -0.18115234375,
+        545.5,
+        78.4375
       ],
       "object_box_xyxy": [
-        -0.15625,
-        -0.724609375,
+        0.3125,
+        0.0,
         640.0,
-        423.25
+        424.0
       ]
     },
     {
-      "query_index": 96,
-      "score": 0.7011427283287048,
-      "subject_score": 0.9560679197311401,
-      "object_score": 0.9196887612342834,
-      "predicate_score": 0.39200329780578613,
+      "query_index": 39,
+      "score": 0.7751938700675964,
+      "subject_score": 0.9720876216888428,
+      "object_score": 0.9347352981567383,
+      "predicate_score": 0.5126689076423645,
       "subject_label_id": 0,
       "subject_label": "person",
       "predicate_id": 2,
@@ -890,49 +890,24 @@
       "object_label_id": 0,
       "object_label": "person",
       "subject_box_xyxy": [
-        50.96875,
-        372.25,
-        153.0,
-        423.5
+        446.25,
+        240.0,
+        528.0,
+        352.25
       ],
       "object_box_xyxy": [
-        55.375,
-        282.0,
-        177.5,
-        425.25
+        452.5,
+        243.25,
+        539.5,
+        356.75
       ]
     },
     {
-      "query_index": 74,
-      "score": 0.6998385190963745,
-      "subject_score": 0.9944069385528564,
-      "object_score": 0.9564833045005798,
-      "predicate_score": 0.36037278175354004,
-      "subject_label_id": 0,
-      "subject_label": "person",
-      "predicate_id": 2,
-      "predicate": "beside",
-      "object_label_id": 0,
-      "object_label": "person",
-      "subject_box_xyxy": [
-        209.75,
-        217.125,
-        315.5,
-        420.0
-      ],
-      "object_box_xyxy": [
-        145.75,
-        231.5,
-        265.25,
-        421.0
-      ]
-    },
-    {
-      "query_index": 64,
-      "score": 0.6976062059402466,
-      "subject_score": 0.9740444421768188,
-      "object_score": 0.6748003363609314,
-      "predicate_score": 0.5165079236030579,
+      "query_index": 80,
+      "score": 0.7674683332443237,
+      "subject_score": 0.9481179118156433,
+      "object_score": 0.9712998867034912,
+      "predicate_score": 0.4908691346645355,
       "subject_label_id": 0,
       "subject_label": "person",
       "predicate_id": 14,
@@ -940,41 +915,66 @@
       "object_label_id": 122,
       "object_label": "floor-other-merged",
       "subject_box_xyxy": [
-        482.5,
-        0.4658203125,
-        558.0,
-        87.0625
+        253.5,
+        0.9833984375,
+        332.0,
+        134.375
       ],
       "object_box_xyxy": [
-        -0.15625,
-        -0.517578125,
+        0.0,
+        0.20703125,
         640.0,
-        423.5
+        424.0
       ]
     },
     {
-      "query_index": 27,
-      "score": 0.6937141418457031,
-      "subject_score": 0.9696710705757141,
-      "object_score": 0.6479007005691528,
-      "predicate_score": 0.5313843488693237,
+      "query_index": 34,
+      "score": 0.7657585740089417,
+      "subject_score": 0.9845696091651917,
+      "object_score": 0.8274713158607483,
+      "predicate_score": 0.5511581897735596,
       "subject_label_id": 0,
       "subject_label": "person",
-      "predicate_id": 14,
-      "predicate": "standing on",
+      "predicate_id": 22,
+      "predicate": "carrying",
+      "object_label_id": 26,
+      "object_label": "handbag",
+      "subject_box_xyxy": [
+        10.25,
+        46.15625,
+        78.875,
+        234.625
+      ],
+      "object_box_xyxy": [
+        48.375,
+        131.875,
+        87.75,
+        183.25
+      ]
+    },
+    {
+      "query_index": 8,
+      "score": 0.7612400054931641,
+      "subject_score": 0.8952568769454956,
+      "object_score": 0.8992503881454468,
+      "predicate_score": 0.5479444265365601,
+      "subject_label_id": 0,
+      "subject_label": "person",
+      "predicate_id": 16,
+      "predicate": "sitting on",
       "object_label_id": 122,
       "object_label": "floor-other-merged",
       "subject_box_xyxy": [
-        173.875,
-        2.12109375,
-        248.625,
-        137.5
+        -0.3515625,
+        195.5,
+        74.5,
+        317.5
       ],
       "object_box_xyxy": [
-        -0.3125,
-        0.62109375,
-        639.5,
-        424.75
+        0.3125,
+        0.4140625,
+        640.0,
+        424.5
       ]
     }
   ]

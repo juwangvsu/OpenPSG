@@ -168,286 +168,11 @@
   },
   "predictions": [
     {
-      "query_index": 6,
-      "score": 0.8446006774902344,
-      "subject_score": 0.9571738243103027,
-      "object_score": 0.7237934470176697,
-      "predicate_score": 0.8696587085723877,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        188.25,
-        318.5,
-        295.5,
-        485.25
-      ],
-      "object_box_xyxy": [
-        0.0,
-        432.25,
-        427.0,
-        639.5
-      ]
-    },
-    {
-      "query_index": 68,
-      "score": 0.832065224647522,
-      "subject_score": 0.9686549305915833,
-      "object_score": 0.7167284488677979,
-      "predicate_score": 0.8297520875930786,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        187.5,
-        316.0,
-        301.75,
-        486.0
-      ],
-      "object_box_xyxy": [
-        0.0,
-        448.5,
-        427.0,
-        639.0
-      ]
-    },
-    {
-      "query_index": 42,
-      "score": 0.827996015548706,
-      "subject_score": 0.974431037902832,
-      "object_score": 0.695294201374054,
-      "predicate_score": 0.8378476500511169,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        189.375,
-        318.0,
-        295.75,
-        486.25
-      ],
-      "object_box_xyxy": [
-        0.20849609375,
-        414.5,
-        427.0,
-        639.0
-      ]
-    },
-    {
-      "query_index": 65,
-      "score": 0.8206324577331543,
-      "subject_score": 0.9627866744995117,
-      "object_score": 0.7175174355506897,
-      "predicate_score": 0.7999880909919739,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        182.5,
-        325.25,
-        292.0,
-        486.5
-      ],
-      "object_box_xyxy": [
-        0.0,
-        428.75,
-        427.0,
-        639.0
-      ]
-    },
-    {
-      "query_index": 53,
-      "score": 0.8200300335884094,
-      "subject_score": 0.9594465494155884,
-      "object_score": 0.7880770564079285,
-      "predicate_score": 0.7292892932891846,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        180.75,
-        310.5,
-        317.5,
-        488.0
-      ],
-      "object_box_xyxy": [
-        -0.104248046875,
-        426.0,
-        427.0,
-        638.5
-      ]
-    },
-    {
-      "query_index": 4,
-      "score": 0.8133008480072021,
-      "subject_score": 0.9730225205421448,
-      "object_score": 0.7064473628997803,
-      "predicate_score": 0.7826200723648071,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        193.5,
-        323.5,
-        302.0,
-        483.5
-      ],
-      "object_box_xyxy": [
-        0.20849609375,
-        417.5,
-        427.0,
-        639.0
-      ]
-    },
-    {
-      "query_index": 47,
-      "score": 0.8087283372879028,
-      "subject_score": 0.9765743613243103,
-      "object_score": 0.6948660016059875,
-      "predicate_score": 0.7794738411903381,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        188.5,
-        322.5,
-        296.0,
-        484.5
-      ],
-      "object_box_xyxy": [
-        0.20849609375,
-        435.0,
-        427.0,
-        639.5
-      ]
-    },
-    {
-      "query_index": 2,
-      "score": 0.7954308986663818,
-      "subject_score": 0.8255271315574646,
-      "object_score": 0.7473257780075073,
-      "predicate_score": 0.8157669305801392,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        182.25,
-        367.25,
-        330.75,
-        489.75
-      ],
-      "object_box_xyxy": [
-        -0.104248046875,
-        428.0,
-        427.0,
-        638.0
-      ]
-    },
-    {
-      "query_index": 51,
-      "score": 0.7773539423942566,
-      "subject_score": 0.9681645035743713,
-      "object_score": 0.709196150302887,
-      "predicate_score": 0.6841335296630859,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        180.75,
-        331.5,
-        290.0,
-        487.75
-      ],
-      "object_box_xyxy": [
-        0.0,
-        413.5,
-        427.0,
-        638.0
-      ]
-    },
-    {
-      "query_index": 22,
-      "score": 0.7737158536911011,
-      "subject_score": 0.7404727339744568,
-      "object_score": 0.9448243379592896,
-      "predicate_score": 0.662040114402771,
-      "subject_label_id": 88,
-      "subject_label": "flower",
-      "predicate_id": 4,
-      "predicate": "in",
-      "object_label_id": 75,
-      "object_label": "vase",
-      "subject_box_xyxy": [
-        62.25,
-        161.25,
-        373.5,
-        380.0
-      ],
-      "object_box_xyxy": [
-        103.0625,
-        293.75,
-        229.375,
-        462.5
-      ]
-    },
-    {
-      "query_index": 75,
-      "score": 0.7679723501205444,
-      "subject_score": 0.756028413772583,
-      "object_score": 0.9431115984916687,
-      "predicate_score": 0.6352366209030151,
-      "subject_label_id": 88,
-      "subject_label": "flower",
-      "predicate_id": 4,
-      "predicate": "in",
-      "object_label_id": 75,
-      "object_label": "vase",
-      "subject_box_xyxy": [
-        62.75,
-        160.625,
-        379.25,
-        382.25
-      ],
-      "object_box_xyxy": [
-        104.625,
-        310.25,
-        221.875,
-        476.5
-      ]
-    },
-    {
-      "query_index": 26,
-      "score": 0.7555416822433472,
-      "subject_score": 0.8770109415054321,
-      "object_score": 0.9352282285690308,
-      "predicate_score": 0.5258388519287109,
+      "query_index": 17,
+      "score": 0.9723877310752869,
+      "subject_score": 0.9857555031776428,
+      "object_score": 0.9863306283950806,
+      "predicate_score": 0.945641815662384,
       "subject_label_id": 88,
       "subject_label": "flower",
       "predicate_id": 4,
@@ -456,23 +181,98 @@
       "object_label": "vase",
       "subject_box_xyxy": [
         61.3125,
-        165.25,
+        149.625,
+        356.0,
+        367.0
+      ],
+      "object_box_xyxy": [
+        184.875,
+        316.5,
+        287.5,
+        476.0
+      ]
+    },
+    {
+      "query_index": 48,
+      "score": 0.9695279002189636,
+      "subject_score": 0.9816252589225769,
+      "object_score": 0.9862128496170044,
+      "predicate_score": 0.9413790702819824,
+      "subject_label_id": 88,
+      "subject_label": "flower",
+      "predicate_id": 4,
+      "predicate": "in",
+      "object_label_id": 75,
+      "object_label": "vase",
+      "subject_box_xyxy": [
+        59.625,
+        154.5,
+        351.25,
+        368.5
+      ],
+      "object_box_xyxy": [
+        183.0,
+        312.0,
+        288.5,
+        475.0
+      ]
+    },
+    {
+      "query_index": 20,
+      "score": 0.9590877890586853,
+      "subject_score": 0.9623439908027649,
+      "object_score": 0.9908740520477295,
+      "predicate_score": 0.925180196762085,
+      "subject_label_id": 88,
+      "subject_label": "flower",
+      "predicate_id": 4,
+      "predicate": "in",
+      "object_label_id": 75,
+      "object_label": "vase",
+      "subject_box_xyxy": [
+        57.84375,
+        152.125,
         365.25,
-        378.0
+        367.25
       ],
       "object_box_xyxy": [
-        92.0625,
-        289.5,
-        226.875,
-        469.5
+        182.375,
+        310.25,
+        290.0,
+        477.5
       ]
     },
     {
-      "query_index": 44,
-      "score": 0.7551737427711487,
-      "subject_score": 0.7827020883560181,
-      "object_score": 0.9340276718139648,
-      "predicate_score": 0.589093804359436,
+      "query_index": 95,
+      "score": 0.9573978781700134,
+      "subject_score": 0.9852945804595947,
+      "object_score": 0.9005350470542908,
+      "predicate_score": 0.9890327453613281,
+      "subject_label_id": 75,
+      "subject_label": "vase",
+      "predicate_id": 3,
+      "predicate": "on",
+      "object_label_id": 120,
+      "object_label": "cabinet-merged",
+      "subject_box_xyxy": [
+        183.625,
+        326.5,
+        292.0,
+        476.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        429.0,
+        427.0,
+        639.0
+      ]
+    },
+    {
+      "query_index": 12,
+      "score": 0.9555792212486267,
+      "subject_score": 0.987390398979187,
+      "object_score": 0.9865397810935974,
+      "predicate_score": 0.8957700729370117,
       "subject_label_id": 88,
       "subject_label": "flower",
       "predicate_id": 4,
@@ -480,24 +280,24 @@
       "object_label_id": 75,
       "object_label": "vase",
       "subject_box_xyxy": [
-        59.9375,
-        161.5,
-        376.25,
-        377.5
+        62.125,
+        150.375,
+        354.25,
+        367.5
       ],
       "object_box_xyxy": [
-        103.75,
+        184.625,
         309.5,
-        233.25,
-        480.5
+        292.75,
+        478.75
       ]
     },
     {
-      "query_index": 0,
-      "score": 0.7517501711845398,
-      "subject_score": 0.8467843532562256,
-      "object_score": 0.9336796998977661,
-      "predicate_score": 0.5373408198356628,
+      "query_index": 66,
+      "score": 0.9481518864631653,
+      "subject_score": 0.9814864993095398,
+      "object_score": 0.9809846878051758,
+      "predicate_score": 0.8852933049201965,
       "subject_label_id": 88,
       "subject_label": "flower",
       "predicate_id": 4,
@@ -505,166 +305,366 @@
       "object_label_id": 75,
       "object_label": "vase",
       "subject_box_xyxy": [
-        63.8125,
-        165.625,
-        377.0,
-        381.5
+        58.78125,
+        155.125,
+        356.0,
+        367.5
       ],
       "object_box_xyxy": [
-        88.9375,
-        297.0,
-        212.125,
-        482.0
-      ]
-    },
-    {
-      "query_index": 72,
-      "score": 0.7248494029045105,
-      "subject_score": 0.6840991377830505,
-      "object_score": 0.7032764554023743,
-      "predicate_score": 0.7915863394737244,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        0.28662109375,
-        345.25,
-        61.40625,
-        516.0
-      ],
-      "object_box_xyxy": [
-        0.0,
-        433.75,
-        427.0,
-        642.5
-      ]
-    },
-    {
-      "query_index": 38,
-      "score": 0.7129277586936951,
-      "subject_score": 0.7229163646697998,
-      "object_score": 0.6922257542610168,
-      "predicate_score": 0.7241037487983704,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        0.1563720703125,
-        347.0,
-        62.4375,
-        515.5
-      ],
-      "object_box_xyxy": [
-        0.0,
-        408.0,
-        427.0,
-        641.0
-      ]
-    },
-    {
-      "query_index": 83,
-      "score": 0.7070238590240479,
-      "subject_score": 0.7362231612205505,
-      "object_score": 0.6825568079948425,
-      "predicate_score": 0.7033216953277588,
-      "subject_label_id": 75,
-      "subject_label": "vase",
-      "predicate_id": 3,
-      "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
-      "subject_box_xyxy": [
-        0.28662109375,
-        344.5,
-        60.5625,
-        515.0
-      ],
-      "object_box_xyxy": [
-        0.0,
-        412.5,
-        427.0,
-        640.5
-      ]
-    },
-    {
-      "query_index": 89,
-      "score": 0.7009108066558838,
-      "subject_score": 0.8417482376098633,
-      "object_score": 0.9188097715377808,
-      "predicate_score": 0.44522595405578613,
-      "subject_label_id": 88,
-      "subject_label": "flower",
-      "predicate_id": 4,
-      "predicate": "in",
-      "object_label_id": 75,
-      "object_label": "vase",
-      "subject_box_xyxy": [
-        62.96875,
-        159.875,
-        375.75,
-        377.5
-      ],
-      "object_box_xyxy": [
-        69.6875,
-        310.0,
-        208.25,
-        497.0
-      ]
-    },
-    {
-      "query_index": 1,
-      "score": 0.7002928853034973,
-      "subject_score": 0.9345620274543762,
-      "object_score": 0.8911892175674438,
-      "predicate_score": 0.4123453199863434,
-      "subject_label_id": 88,
-      "subject_label": "flower",
-      "predicate_id": 4,
-      "predicate": "in",
-      "object_label_id": 75,
-      "object_label": "vase",
-      "subject_box_xyxy": [
-        61.09375,
-        166.875,
-        363.0,
-        374.0
-      ],
-      "object_box_xyxy": [
-        85.5,
-        288.75,
-        214.125,
+        182.125,
+        313.75,
+        288.25,
         479.5
       ]
     },
     {
-      "query_index": 23,
-      "score": 0.6978880763053894,
-      "subject_score": 0.7662519812583923,
-      "object_score": 0.6793006658554077,
-      "predicate_score": 0.6530157327651978,
+      "query_index": 47,
+      "score": 0.9328733682632446,
+      "subject_score": 0.9827820658683777,
+      "object_score": 0.890245795249939,
+      "predicate_score": 0.9278995394706726,
       "subject_label_id": 75,
       "subject_label": "vase",
       "predicate_id": 3,
       "predicate": "on",
-      "object_label_id": 121,
-      "object_label": "table-merged",
+      "object_label_id": 120,
+      "object_label": "cabinet-merged",
       "subject_box_xyxy": [
-        0.4951171875,
-        344.5,
-        63.90625,
-        515.0
+        184.125,
+        329.75,
+        290.0,
+        476.0
       ],
       "object_box_xyxy": [
         0.0,
-        390.25,
+        436.5,
         427.0,
-        642.0
+        639.0
+      ]
+    },
+    {
+      "query_index": 44,
+      "score": 0.9216314554214478,
+      "subject_score": 0.9559009075164795,
+      "object_score": 0.9832184910774231,
+      "predicate_score": 0.8329309225082397,
+      "subject_label_id": 88,
+      "subject_label": "flower",
+      "predicate_id": 4,
+      "predicate": "in",
+      "object_label_id": 75,
+      "object_label": "vase",
+      "subject_box_xyxy": [
+        45.875,
+        156.25,
+        368.25,
+        370.5
+      ],
+      "object_box_xyxy": [
+        184.375,
+        309.0,
+        290.75,
+        479.5
+      ]
+    },
+    {
+      "query_index": 92,
+      "score": 0.8545535206794739,
+      "subject_score": 0.7881621718406677,
+      "object_score": 0.8215417265892029,
+      "predicate_score": 0.9637682437896729,
+      "subject_label_id": 41,
+      "subject_label": "cup",
+      "predicate_id": 3,
+      "predicate": "on",
+      "object_label_id": 120,
+      "object_label": "cabinet-merged",
+      "subject_box_xyxy": [
+        -0.0521240234375,
+        367.0,
+        73.75,
+        493.0
+      ],
+      "object_box_xyxy": [
+        -0.104248046875,
+        429.0,
+        427.0,
+        639.5
+      ]
+    },
+    {
+      "query_index": 42,
+      "score": 0.8339508771896362,
+      "subject_score": 0.9926940202713013,
+      "object_score": 0.9205323457717896,
+      "predicate_score": 0.634697675704956,
+      "subject_label_id": 75,
+      "subject_label": "vase",
+      "predicate_id": 1,
+      "predicate": "in front of",
+      "object_label_id": 131,
+      "object_label": "wall-other-merged",
+      "subject_box_xyxy": [
+        187.125,
+        328.0,
+        288.25,
+        477.5
+      ],
+      "object_box_xyxy": [
+        0.4169921875,
+        2.34375,
+        427.5,
+        467.5
+      ]
+    },
+    {
+      "query_index": 60,
+      "score": 0.7930026650428772,
+      "subject_score": 0.6292182207107544,
+      "object_score": 0.9635871052742004,
+      "predicate_score": 0.8224918842315674,
+      "subject_label_id": 41,
+      "subject_label": "cup",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 75,
+      "object_label": "vase",
+      "subject_box_xyxy": [
+        -0.234619140625,
+        366.0,
+        72.0625,
+        500.25
+      ],
+      "object_box_xyxy": [
+        196.25,
+        330.0,
+        294.5,
+        486.25
+      ]
+    },
+    {
+      "query_index": 88,
+      "score": 0.7889718413352966,
+      "subject_score": 0.9572094082832336,
+      "object_score": 0.6260291337966919,
+      "predicate_score": 0.8195643424987793,
+      "subject_label_id": 75,
+      "subject_label": "vase",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 75,
+      "object_label": "vase",
+      "subject_box_xyxy": [
+        184.0,
+        324.0,
+        293.5,
+        474.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        361.25,
+        57.0625,
+        497.5
+      ]
+    },
+    {
+      "query_index": 31,
+      "score": 0.7730149626731873,
+      "subject_score": 0.9850876927375793,
+      "object_score": 0.8257789015769958,
+      "predicate_score": 0.567838728427887,
+      "subject_label_id": 75,
+      "subject_label": "vase",
+      "predicate_id": 1,
+      "predicate": "in front of",
+      "object_label_id": 131,
+      "object_label": "wall-other-merged",
+      "subject_box_xyxy": [
+        189.375,
+        331.5,
+        290.5,
+        477.25
+      ],
+      "object_box_xyxy": [
+        0.20849609375,
+        4.375,
+        427.0,
+        459.0
+      ]
+    },
+    {
+      "query_index": 83,
+      "score": 0.7696636915206909,
+      "subject_score": 0.7517578601837158,
+      "object_score": 0.6655821800231934,
+      "predicate_score": 0.911220133304596,
+      "subject_label_id": 41,
+      "subject_label": "cup",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 75,
+      "object_label": "vase",
+      "subject_box_xyxy": [
+        -0.02606201171875,
+        367.75,
+        71.5,
+        499.0
+      ],
+      "object_box_xyxy": [
+        147.375,
+        269.25,
+        324.75,
+        463.75
+      ]
+    },
+    {
+      "query_index": 38,
+      "score": 0.763415515422821,
+      "subject_score": 0.7848989367485046,
+      "object_score": 0.9713659882545471,
+      "predicate_score": 0.58356112241745,
+      "subject_label_id": 41,
+      "subject_label": "cup",
+      "predicate_id": 1,
+      "predicate": "in front of",
+      "object_label_id": 131,
+      "object_label": "wall-other-merged",
+      "subject_box_xyxy": [
+        0.0,
+        366.0,
+        71.4375,
+        492.75
+      ],
+      "object_box_xyxy": [
+        0.20849609375,
+        1.71875,
+        427.0,
+        479.5
+      ]
+    },
+    {
+      "query_index": 76,
+      "score": 0.7630221247673035,
+      "subject_score": 0.9536184668540955,
+      "object_score": 0.9797981977462769,
+      "predicate_score": 0.47544485330581665,
+      "subject_label_id": 75,
+      "subject_label": "vase",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 131,
+      "object_label": "wall-other-merged",
+      "subject_box_xyxy": [
+        184.25,
+        326.0,
+        291.0,
+        475.25
+      ],
+      "object_box_xyxy": [
+        0.4169921875,
+        1.5625,
+        427.5,
+        496.5
+      ]
+    },
+    {
+      "query_index": 9,
+      "score": 0.7391413450241089,
+      "subject_score": 0.7062076926231384,
+      "object_score": 0.9744652509689331,
+      "predicate_score": 0.5867913365364075,
+      "subject_label_id": 41,
+      "subject_label": "cup",
+      "predicate_id": 1,
+      "predicate": "in front of",
+      "object_label_id": 131,
+      "object_label": "wall-other-merged",
+      "subject_box_xyxy": [
+        -0.07818603515625,
+        364.5,
+        72.875,
+        496.25
+      ],
+      "object_box_xyxy": [
+        0.20849609375,
+        0.46875,
+        427.0,
+        470.5
+      ]
+    },
+    {
+      "query_index": 96,
+      "score": 0.7351287603378296,
+      "subject_score": 0.8910312056541443,
+      "object_score": 0.8065508008003235,
+      "predicate_score": 0.5527969002723694,
+      "subject_label_id": 41,
+      "subject_label": "cup",
+      "predicate_id": 3,
+      "predicate": "on",
+      "object_label_id": 120,
+      "object_label": "cabinet-merged",
+      "subject_box_xyxy": [
+        -0.390869140625,
+        370.5,
+        71.0,
+        497.5
+      ],
+      "object_box_xyxy": [
+        0.0,
+        450.0,
+        427.0,
+        640.0
+      ]
+    },
+    {
+      "query_index": 56,
+      "score": 0.72171950340271,
+      "subject_score": 0.6559715867042542,
+      "object_score": 0.9516435861587524,
+      "predicate_score": 0.6022073030471802,
+      "subject_label_id": 41,
+      "subject_label": "cup",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 75,
+      "object_label": "vase",
+      "subject_box_xyxy": [
+        -0.13037109375,
+        372.75,
+        67.6875,
+        501.0
+      ],
+      "object_box_xyxy": [
+        195.0,
+        329.5,
+        300.0,
+        484.5
+      ]
+    },
+    {
+      "query_index": 50,
+      "score": 0.7128493189811707,
+      "subject_score": 0.6715072393417358,
+      "object_score": 0.9770937561988831,
+      "predicate_score": 0.5520853400230408,
+      "subject_label_id": 41,
+      "subject_label": "cup",
+      "predicate_id": 1,
+      "predicate": "in front of",
+      "object_label_id": 131,
+      "object_label": "wall-other-merged",
+      "subject_box_xyxy": [
+        -0.104248046875,
+        357.5,
+        70.5,
+        493.0
+      ],
+      "object_box_xyxy": [
+        0.20849609375,
+        1.09375,
+        427.0,
+        480.5
       ]
     }
   ]

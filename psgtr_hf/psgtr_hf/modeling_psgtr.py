@@ -71,6 +71,7 @@ class PsgtrForPanopticSceneGraphGeneration(DetrPreTrainedModel):
 
     def __init__(self, config: PsgtrConfig) -> None:
         super().__init__(config)
+        print(f"PsgtrForPanopticSceneGraphGeneration init config = {config}")
         self.model = DetrModel(config)
 
         self.subject_class_embed = nn.Linear(
@@ -160,7 +161,7 @@ class PsgtrForPanopticSceneGraphGeneration(DetrPreTrainedModel):
         # Hugging Face PR revision 10 contains the equivalent safetensors file.
         if pretrained_model_name_or_path == "facebook/detr-resnet-50-panoptic":
             pretrained_kwargs.setdefault("revision", "refs/pr/10")
-
+        print(f"pretrained_model_name_or_path = {pretrained_model_name_or_path} \n {pretrained_kwargs}")
         detr = DetrForSegmentation.from_pretrained(
             pretrained_model_name_or_path,
             **pretrained_kwargs,
@@ -172,6 +173,8 @@ class PsgtrForPanopticSceneGraphGeneration(DetrPreTrainedModel):
                 num_relation_labels=num_relation_labels,
                 auxiliary_loss=True,
             )
+        print(f"config = {config}")
+
         model = cls(config)
 
         target_state = model.model.state_dict()

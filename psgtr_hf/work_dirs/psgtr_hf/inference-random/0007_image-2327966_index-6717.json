@@ -94,11 +94,11 @@
   },
   "predictions": [
     {
-      "query_index": 49,
-      "score": 0.9290414452552795,
-      "subject_score": 0.9930281043052673,
-      "object_score": 0.8717854619026184,
-      "predicate_score": 0.9262625575065613,
+      "query_index": 0,
+      "score": 0.9939783215522766,
+      "subject_score": 0.99808669090271,
+      "object_score": 0.9975854158401489,
+      "predicate_score": 0.9863075613975525,
       "subject_label_id": 119,
       "subject_label": "sky-other-merged",
       "predicate_id": 0,
@@ -106,99 +106,24 @@
       "object_label_id": 6,
       "object_label": "train",
       "subject_box_xyxy": [
-        0.9375,
-        -1.640625,
-        641.0,
-        308.0
+        0.3125,
+        0.234375,
+        640.0,
+        300.25
       ],
       "object_box_xyxy": [
-        -0.46875,
-        63.28125,
-        639.5,
-        407.5
-      ]
-    },
-    {
-      "query_index": 89,
-      "score": 0.9098594188690186,
-      "subject_score": 0.9889541864395142,
-      "object_score": 0.8744300007820129,
-      "predicate_score": 0.871006965637207,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        1.25,
-        -1.7578125,
-        641.0,
-        308.0
-      ],
-      "object_box_xyxy": [
-        41.875,
-        74.1875,
-        597.0,
-        401.75
-      ]
-    },
-    {
-      "query_index": 31,
-      "score": 0.90899658203125,
-      "subject_score": 0.9909153580665588,
-      "object_score": 0.8847054243087769,
-      "predicate_score": 0.8567448258399963,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        0.9375,
-        -1.640625,
-        641.0,
-        308.25
-      ],
-      "object_box_xyxy": [
-        5.3125,
-        61.1875,
-        633.5,
-        402.25
-      ]
-    },
-    {
-      "query_index": 21,
-      "score": 0.9085378050804138,
-      "subject_score": 0.9914608001708984,
-      "object_score": 0.8225710988044739,
-      "predicate_score": 0.919559895992279,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        0.9375,
-        -1.640625,
-        641.0,
-        309.75
-      ],
-      "object_box_xyxy": [
-        5.3125,
-        104.0625,
-        633.0,
-        391.5
+        0.46875,
+        36.6875,
+        640.0,
+        394.75
       ]
     },
     {
       "query_index": 80,
-      "score": 0.866192638874054,
-      "subject_score": 0.9537890553474426,
-      "object_score": 0.8198443651199341,
-      "predicate_score": 0.831112265586853,
+      "score": 0.9846507906913757,
+      "subject_score": 0.998403012752533,
+      "object_score": 0.970201313495636,
+      "predicate_score": 0.9855506420135498,
       "subject_label_id": 119,
       "subject_label": "sky-other-merged",
       "predicate_id": 0,
@@ -206,74 +131,24 @@
       "object_label_id": 100,
       "object_label": "road",
       "subject_box_xyxy": [
-        0.9375,
-        0.1171875,
-        641.0,
-        302.25
+        0.3125,
+        0.0,
+        640.0,
+        299.25
       ],
       "object_box_xyxy": [
         -0.3125,
-        338.0,
+        346.25,
         639.5,
-        482.0
+        480.0
       ]
     },
     {
       "query_index": 3,
-      "score": 0.818885326385498,
-      "subject_score": 0.9649173021316528,
-      "object_score": 0.7799826860427856,
-      "predicate_score": 0.7296157479286194,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        1.25,
-        -1.640625,
-        641.0,
-        309.0
-      ],
-      "object_box_xyxy": [
-        53.4375,
-        127.25,
-        584.5,
-        378.5
-      ]
-    },
-    {
-      "query_index": 5,
-      "score": 0.8065668940544128,
-      "subject_score": 0.9917409420013428,
-      "object_score": 0.6648897528648376,
-      "predicate_score": 0.7957438826560974,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        1.25,
-        -1.40625,
-        641.0,
-        308.25
-      ],
-      "object_box_xyxy": [
-        28.125,
-        105.375,
-        426.5,
-        350.5
-      ]
-    },
-    {
-      "query_index": 64,
-      "score": 0.7778100967407227,
-      "subject_score": 0.9795942902565002,
-      "object_score": 0.5848962664604187,
-      "predicate_score": 0.8212882876396179,
+      "score": 0.9428896903991699,
+      "subject_score": 0.9977142810821533,
+      "object_score": 0.924156904220581,
+      "predicate_score": 0.9091399312019348,
       "subject_label_id": 119,
       "subject_label": "sky-other-merged",
       "predicate_id": 0,
@@ -281,74 +156,49 @@
       "object_label_id": 125,
       "object_label": "grass-merged",
       "subject_box_xyxy": [
-        1.25,
-        -0.9375,
-        641.0,
-        305.25
+        0.3125,
+        -0.234375,
+        640.0,
+        299.25
+      ],
+      "object_box_xyxy": [
+        0.0,
+        321.0,
+        640.0,
+        472.5
+      ]
+    },
+    {
+      "query_index": 74,
+      "score": 0.9423317313194275,
+      "subject_score": 0.9045261144638062,
+      "object_score": 0.9540518522262573,
+      "predicate_score": 0.9696574211120605,
+      "subject_label_id": 6,
+      "subject_label": "train",
+      "predicate_id": 48,
+      "predicate": "driving on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        -0.625,
+        33.0625,
+        637.5,
+        392.0
       ],
       "object_box_xyxy": [
         -0.15625,
-        285.75,
+        340.5,
         640.0,
-        478.25
+        480.5
       ]
     },
     {
-      "query_index": 1,
-      "score": 0.7638030648231506,
-      "subject_score": 0.9898556470870972,
-      "object_score": 0.6047024726867676,
-      "predicate_score": 0.7444416284561157,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        1.25,
-        -1.2890625,
-        641.0,
-        307.0
-      ],
-      "object_box_xyxy": [
-        -3.4375,
-        202.75,
-        218.75,
-        343.25
-      ]
-    },
-    {
-      "query_index": 99,
-      "score": 0.7520318031311035,
-      "subject_score": 0.9883483052253723,
-      "object_score": 0.5427948832511902,
-      "predicate_score": 0.7927985191345215,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        1.25,
-        -1.0546875,
-        641.0,
-        306.5
-      ],
-      "object_box_xyxy": [
-        49.3125,
-        248.5,
-        299.5,
-        355.25
-      ]
-    },
-    {
-      "query_index": 81,
-      "score": 0.7433174848556519,
-      "subject_score": 0.9412606358528137,
-      "object_score": 0.626728892326355,
-      "predicate_score": 0.6961991190910339,
+      "query_index": 32,
+      "score": 0.8984666466712952,
+      "subject_score": 0.9959335923194885,
+      "object_score": 0.9021479487419128,
+      "predicate_score": 0.8072307705879211,
       "subject_label_id": 119,
       "subject_label": "sky-other-merged",
       "predicate_id": 0,
@@ -356,74 +206,74 @@
       "object_label_id": 100,
       "object_label": "road",
       "subject_box_xyxy": [
+        0.3125,
+        -0.46875,
+        640.0,
+        298.0
+      ],
+      "object_box_xyxy": [
+        -0.15625,
+        345.5,
+        640.0,
+        480.5
+      ]
+    },
+    {
+      "query_index": 16,
+      "score": 0.8568166494369507,
+      "subject_score": 0.9847936034202576,
+      "object_score": 0.9580296277999878,
+      "predicate_score": 0.6667138338088989,
+      "subject_label_id": 125,
+      "subject_label": "grass-merged",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
         0.9375,
-        -0.234375,
+        322.0,
         641.0,
-        305.25
+        470.25
       ],
       "object_box_xyxy": [
         -0.15625,
-        325.25,
+        345.0,
         640.0,
-        481.5
+        480.5
       ]
     },
     {
-      "query_index": 95,
-      "score": 0.7294883131980896,
-      "subject_score": 0.8893886804580688,
-      "object_score": 0.8631772994995117,
-      "predicate_score": 0.5056656002998352,
-      "subject_label_id": 100,
-      "subject_label": "road",
-      "predicate_id": 5,
-      "predicate": "attached to",
+      "query_index": 76,
+      "score": 0.8517007827758789,
+      "subject_score": 0.9637702703475952,
+      "object_score": 0.9668702483177185,
+      "predicate_score": 0.6630089282989502,
+      "subject_label_id": 6,
+      "subject_label": "train",
+      "predicate_id": 3,
+      "predicate": "on",
       "object_label_id": 125,
       "object_label": "grass-merged",
       "subject_box_xyxy": [
-        -0.46875,
-        341.75,
-        639.5,
-        479.5
+        0.625,
+        28.0,
+        640.5,
+        391.0
       ],
       "object_box_xyxy": [
-        -0.3125,
-        320.75,
-        639.5,
-        477.0
-      ]
-    },
-    {
-      "query_index": 93,
-      "score": 0.714026927947998,
-      "subject_score": 0.8289218544960022,
-      "object_score": 0.8373420834541321,
-      "predicate_score": 0.5244780778884888,
-      "subject_label_id": 100,
-      "subject_label": "road",
-      "predicate_id": 5,
-      "predicate": "attached to",
-      "object_label_id": 125,
-      "object_label": "grass-merged",
-      "subject_box_xyxy": [
-        -0.15625,
-        339.0,
+        0.0,
+        315.0,
         640.0,
-        477.75
-      ],
-      "object_box_xyxy": [
-        -3.59375,
-        349.25,
-        634.0,
-        477.25
+        478.0
       ]
     },
     {
-      "query_index": 2,
-      "score": 0.70316481590271,
-      "subject_score": 0.8001100420951843,
-      "object_score": 0.8773471117019653,
-      "predicate_score": 0.49527937173843384,
+      "query_index": 67,
+      "score": 0.8326053619384766,
+      "subject_score": 0.9361107349395752,
+      "object_score": 0.9489343166351318,
+      "predicate_score": 0.6497619152069092,
       "subject_label_id": 100,
       "subject_label": "road",
       "predicate_id": 5,
@@ -431,99 +281,74 @@
       "object_label_id": 125,
       "object_label": "grass-merged",
       "subject_box_xyxy": [
-        -0.3125,
-        344.75,
-        639.5,
-        478.75
-      ],
-      "object_box_xyxy": [
-        -0.46875,
-        332.0,
-        639.5,
+        0.625,
+        349.75,
+        640.5,
         479.0
-      ]
-    },
-    {
-      "query_index": 52,
-      "score": 0.7021114230155945,
-      "subject_score": 0.9884067177772522,
-      "object_score": 0.45750147104263306,
-      "predicate_score": 0.7654026746749878,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        2.1875,
-        -0.9375,
-        642.5,
-        308.5
       ],
       "object_box_xyxy": [
-        334.75,
-        254.5,
-        625.5,
-        353.5
-      ]
-    },
-    {
-      "query_index": 61,
-      "score": 0.6807732582092285,
-      "subject_score": 0.7878618240356445,
-      "object_score": 0.8523772954940796,
-      "predicate_score": 0.46981358528137207,
-      "subject_label_id": 119,
-      "subject_label": "sky-other-merged",
-      "predicate_id": 0,
-      "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
-      "subject_box_xyxy": [
-        0.9375,
-        -1.7578125,
-        641.0,
-        326.25
-      ],
-      "object_box_xyxy": [
-        2.5,
-        81.9375,
-        635.5,
-        382.5
+        0.3125,
+        319.75,
+        640.0,
+        465.0
       ]
     },
     {
       "query_index": 35,
-      "score": 0.660584032535553,
-      "subject_score": 0.9914841055870056,
-      "object_score": 0.39113399386405945,
-      "predicate_score": 0.7433150410652161,
+      "score": 0.7963824272155762,
+      "subject_score": 0.9983519315719604,
+      "object_score": 0.7067338228225708,
+      "predicate_score": 0.7158557176589966,
       "subject_label_id": 119,
       "subject_label": "sky-other-merged",
       "predicate_id": 0,
       "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
+      "object_label_id": 129,
+      "object_label": "building-other-merged",
       "subject_box_xyxy": [
-        1.25,
-        -1.0546875,
-        641.0,
-        305.5
+        0.3125,
+        0.8203125,
+        640.0,
+        303.75
       ],
       "object_box_xyxy": [
-        1.09375,
-        178.25,
-        222.75,
-        324.0
+        42.4375,
+        76.5,
+        181.0,
+        173.375
       ]
     },
     {
-      "query_index": 19,
-      "score": 0.6498323082923889,
-      "subject_score": 0.5993165373802185,
-      "object_score": 0.8363014459609985,
-      "predicate_score": 0.5475009679794312,
+      "query_index": 21,
+      "score": 0.7573423385620117,
+      "subject_score": 0.9983447790145874,
+      "object_score": 0.6924848556518555,
+      "predicate_score": 0.6283271908760071,
+      "subject_label_id": 119,
+      "subject_label": "sky-other-merged",
+      "predicate_id": 0,
+      "predicate": "over",
+      "object_label_id": 129,
+      "object_label": "building-other-merged",
+      "subject_box_xyxy": [
+        0.3125,
+        0.8203125,
+        640.0,
+        302.75
+      ],
+      "object_box_xyxy": [
+        10.625,
+        54.1875,
+        184.375,
+        175.125
+      ]
+    },
+    {
+      "query_index": 58,
+      "score": 0.7451726794242859,
+      "subject_score": 0.8652274012565613,
+      "object_score": 0.9434486031532288,
+      "predicate_score": 0.5069000124931335,
       "subject_label_id": 100,
       "subject_label": "road",
       "predicate_id": 5,
@@ -531,66 +356,241 @@
       "object_label_id": 125,
       "object_label": "grass-merged",
       "subject_box_xyxy": [
-        -0.46875,
-        331.5,
-        639.5,
-        475.75
-      ],
-      "object_box_xyxy": [
-        -0.46875,
-        336.0,
-        639.5,
+        0.625,
+        350.5,
+        640.5,
         478.5
+      ],
+      "object_box_xyxy": [
+        0.0,
+        333.5,
+        640.0,
+        479.75
       ]
     },
     {
-      "query_index": 55,
-      "score": 0.6302456855773926,
-      "subject_score": 0.9772109985351562,
-      "object_score": 0.34446606040000916,
-      "predicate_score": 0.743695080280304,
+      "query_index": 30,
+      "score": 0.7435287237167358,
+      "subject_score": 0.781923770904541,
+      "object_score": 0.9679197072982788,
+      "predicate_score": 0.5431122183799744,
+      "subject_label_id": 6,
+      "subject_label": "train",
+      "predicate_id": 3,
+      "predicate": "on",
+      "object_label_id": 100,
+      "object_label": "road",
+      "subject_box_xyxy": [
+        0.3125,
+        31.53125,
+        639.0,
+        391.0
+      ],
+      "object_box_xyxy": [
+        -0.3125,
+        346.5,
+        639.5,
+        480.5
+      ]
+    },
+    {
+      "query_index": 69,
+      "score": 0.7348867654800415,
+      "subject_score": 0.9963204860687256,
+      "object_score": 0.5088723301887512,
+      "predicate_score": 0.782804548740387,
       "subject_label_id": 119,
       "subject_label": "sky-other-merged",
       "predicate_id": 0,
       "predicate": "over",
-      "object_label_id": 6,
-      "object_label": "train",
+      "object_label_id": 98,
+      "object_label": "railroad",
       "subject_box_xyxy": [
-        1.25,
-        -1.171875,
-        641.0,
-        311.5
+        0.3125,
+        0.3515625,
+        640.0,
+        300.0
       ],
       "object_box_xyxy": [
-        -8.90625,
-        275.5,
-        278.75,
-        373.0
+        0.4296875,
+        369.5,
+        91.25,
+        420.0
       ]
     },
     {
-      "query_index": 0,
-      "score": 0.610526978969574,
-      "subject_score": 0.9803870320320129,
-      "object_score": 0.3148234784603119,
-      "predicate_score": 0.7373096942901611,
+      "query_index": 66,
+      "score": 0.7184389233589172,
+      "subject_score": 0.9976199269294739,
+      "object_score": 0.725899875164032,
+      "predicate_score": 0.5120681524276733,
       "subject_label_id": 119,
       "subject_label": "sky-other-merged",
       "predicate_id": 0,
       "predicate": "over",
+      "object_label_id": 129,
+      "object_label": "building-other-merged",
+      "subject_box_xyxy": [
+        0.3125,
+        0.46875,
+        640.0,
+        304.5
+      ],
+      "object_box_xyxy": [
+        33.6875,
+        86.5,
+        150.375,
+        187.5
+      ]
+    },
+    {
+      "query_index": 82,
+      "score": 0.7180056571960449,
+      "subject_score": 0.9472473859786987,
+      "object_score": 0.980095624923706,
+      "predicate_score": 0.3987051248550415,
+      "subject_label_id": 125,
+      "subject_label": "grass-merged",
+      "predicate_id": 2,
+      "predicate": "beside",
       "object_label_id": 6,
       "object_label": "train",
       "subject_box_xyxy": [
-        1.25,
-        -1.171875,
+        0.9375,
+        339.25,
         641.0,
-        310.75
+        476.5
       ],
       "object_box_xyxy": [
-        4.53125,
-        270.75,
-        342.0,
-        375.75
+        0.46875,
+        34.6875,
+        640.0,
+        390.0
+      ]
+    },
+    {
+      "query_index": 83,
+      "score": 0.7088534235954285,
+      "subject_score": 0.9398682713508606,
+      "object_score": 0.9909928441047668,
+      "predicate_score": 0.38241222500801086,
+      "subject_label_id": 125,
+      "subject_label": "grass-merged",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 6,
+      "object_label": "train",
+      "subject_box_xyxy": [
+        0.9375,
+        326.75,
+        641.0,
+        467.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        37.75,
+        639.5,
+        395.5
+      ]
+    },
+    {
+      "query_index": 42,
+      "score": 0.6993946433067322,
+      "subject_score": 0.7532288432121277,
+      "object_score": 0.9701099991798401,
+      "predicate_score": 0.4681866466999054,
+      "subject_label_id": 100,
+      "subject_label": "road",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 6,
+      "object_label": "train",
+      "subject_box_xyxy": [
+        0.625,
+        358.0,
+        640.5,
+        479.0
+      ],
+      "object_box_xyxy": [
+        0.3125,
+        32.21875,
+        640.0,
+        397.5
+      ]
+    },
+    {
+      "query_index": 53,
+      "score": 0.6922760605812073,
+      "subject_score": 0.8634949922561646,
+      "object_score": 0.9854151010513306,
+      "predicate_score": 0.38990509510040283,
+      "subject_label_id": 125,
+      "subject_label": "grass-merged",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 6,
+      "object_label": "train",
+      "subject_box_xyxy": [
+        0.625,
+        316.5,
+        640.5,
+        466.5
+      ],
+      "object_box_xyxy": [
+        -1.5625,
+        36.21875,
+        637.0,
+        398.0
+      ]
+    },
+    {
+      "query_index": 11,
+      "score": 0.6902239322662354,
+      "subject_score": 0.9350870847702026,
+      "object_score": 0.9899545907974243,
+      "predicate_score": 0.3552243113517761,
+      "subject_label_id": 125,
+      "subject_label": "grass-merged",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 6,
+      "object_label": "train",
+      "subject_box_xyxy": [
+        0.9375,
+        323.25,
+        641.0,
+        470.5
+      ],
+      "object_box_xyxy": [
+        0.3125,
+        29.65625,
+        640.0,
+        393.75
+      ]
+    },
+    {
+      "query_index": 64,
+      "score": 0.6648254990577698,
+      "subject_score": 0.9635418653488159,
+      "object_score": 0.8892342448234558,
+      "predicate_score": 0.3429543077945709,
+      "subject_label_id": 6,
+      "subject_label": "train",
+      "predicate_id": 2,
+      "predicate": "beside",
+      "object_label_id": 125,
+      "object_label": "grass-merged",
+      "subject_box_xyxy": [
+        0.3125,
+        25.65625,
+        640.0,
+        390.0
+      ],
+      "object_box_xyxy": [
+        0.0,
+        330.0,
+        640.0,
+        479.0
       ]
     }
   ]
