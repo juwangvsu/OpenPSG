@@ -280,6 +280,7 @@ class OpenPsgDataset(Dataset[dict[str, Any]]):
         transforms: PsgImageTransforms | None = None,
         filter_empty_relations: bool = True,
         deduplicate_relations: bool = True,
+        randomize_duplicate_relations: bool | None = None,
         max_samples: int | None = None,
     ) -> None:
         self.annotation_file = Path(annotation_file)
@@ -292,6 +293,11 @@ class OpenPsgDataset(Dataset[dict[str, Any]]):
             min_size_choices=(800,),
         )
         self.deduplicate_relations = deduplicate_relations
+        self.randomize_duplicate_relations = (
+            split == "train"
+            if randomize_duplicate_relations is None
+            else bool(randomize_duplicate_relations)
+        )
 
         with self.annotation_file.open("r", encoding="utf-8") as stream:
             payload = json.load(stream)
@@ -360,7 +366,7 @@ class OpenPsgDataset(Dataset[dict[str, Any]]):
 
     def _relations(self, sample: dict[str, Any]) -> torch.Tensor:
         relations = [tuple(int(value) for value in relation) for relation in sample["relations"]]
-        if self.deduplicate_relations and self.split == "train":
+        if self.deduplicate_relations and self.randomize_duplicate_relations:
             grouped: dict[tuple[int, int], list[int]] = {}
             for subject, object_, predicate in relations:
                 grouped.setdefault((subject, object_), []).append(predicate)

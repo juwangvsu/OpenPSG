@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
-__version__ = "0.4.0"
+__version__ = "0.5.0"
 
 __all__ = [
     "PsgtrConfig",
@@ -15,9 +15,11 @@ __all__ = [
     "PsgtrHungarianMatcher",
     "PsgtrLoss",
     "PsgtrOutput",
+    "PsgEvaluationAccumulator",
 ]
 
 if TYPE_CHECKING:
+    from .configuration_psgtr import PsgtrConfig
     from .dataset import (
         OpenPsgDataset,
         OpenPsgMetadata,
@@ -25,8 +27,8 @@ if TYPE_CHECKING:
         PsgImageTransforms,
         build_openpsg_dataloaders,
     )
-    from .configuration_psgtr import PsgtrConfig
     from .loss import PsgtrHungarianMatcher, PsgtrLoss
+    from .metrics import PsgEvaluationAccumulator
     from .modeling_psgtr import (
         PsgtrForPanopticSceneGraphGeneration,
         PsgtrOutput,
@@ -67,6 +69,10 @@ def __getattr__(name: str) -> Any:
             "PsgtrHungarianMatcher": PsgtrHungarianMatcher,
             "PsgtrLoss": PsgtrLoss,
         }[name]
+    if name == "PsgEvaluationAccumulator":
+        from .metrics import PsgEvaluationAccumulator
+
+        return PsgEvaluationAccumulator
     if name in {"PsgtrForPanopticSceneGraphGeneration", "PsgtrOutput"}:
         from .modeling_psgtr import (
             PsgtrForPanopticSceneGraphGeneration,

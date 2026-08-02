@@ -23,7 +23,8 @@ The implementation contains:
 - DETR panoptic checkpoint initialization.
 - `save_pretrained()` / `from_pretrained()` compatibility through `PreTrainedModel`.
 - Native OpenPSG JSON/COCO panoptic dataset loading without MMDetection.
-- Joint image/mask augmentation, padded collation, validation, and checkpointed training.
+- Joint image/mask augmentation, padded collation, sampled evaluation, and checkpointed training.
+- Four-epoch evaluation on fixed random train/validation subsets with PQ/SQ/RQ and predicate R@K/mR@K.
 
 The defaults follow OpenPSG: 133 object classes, 56 predicates, and 100 queries.
 
@@ -112,6 +113,8 @@ psgtr-train \
   --lr 1e-4 \
   --backbone-lr 1e-5 \
   --lr-drop 40 \
+  --eval-every 4 \
+  --eval-samples 200 \
   --amp
 ```
 
@@ -156,7 +159,53 @@ The training loop includes:
 - OpenPSG-style random horizontal flip, multi-scale resize, and relation-preserving crop.
 - Variable-size image padding and pixel masks.
 - Separate backbone and transformer/head learning rates.
-- Gradient clipping, AMP, gradient accumulation, validation loss, checkpoint rotation, and resume.
+- Gradient clipping, AMP, gradient accumulation, checkpoint rotation, and resume.
+- Deterministic evaluation every four epochs on 200 random training and 200 random validation images.
+- Panoptic Quality metrics (`PQ`, `SQ`, `RQ`, plus thing/stuff variants).
+- Mask-grounded predicate relation recall (`R@20/50/100`) and class-balanced mean recall (`mR@20/50/100`).
+
+### Sampled evaluation during training
+
+Evaluation defaults to every fourth epoch and uses one fixed, reproducible random
+subset of 200 images from each split. Training images use deterministic evaluation
+resizing rather than random training augmentation. Configure it with:
+
+```bash
+--eval-every 4 \
+--eval-samples 200 \
+--eval-batch-size 1 \
+--eval-recall-k 20 50 100 \
+--eval-entity-score-threshold 0.25 \
+--eval-mask-threshold 0.5 \
+--eval-iou-threshold 0.5
+```
+
+The selected image IDs are saved once to:
+
+```text
+output_dir/evaluation-samples.json
+```
+
+Each evaluation writes detailed aggregate and per-class metrics to:
+
+```text
+output_dir/evaluation-epoch-0004.json
+output_dir/evaluation-epoch-0008.json
+output_dir/evaluation-history.jsonl
+```
+
+PSGTR predicts duplicate subject/object endpoints across relation queries. For PQ,
+the evaluator first converts these endpoint proposals into one non-overlapping
+panoptic prediction: duplicate thing masks are suppressed, same-class stuff masks
+are merged, and each pixel is assigned to the highest-scoring surviving mask. It
+then computes category-averaged standard PQ, segmentation quality (SQ), and
+recognition quality (RQ).
+
+Predicate `R@K` is mask-grounded scene-graph recall. A ground-truth relation is
+recalled only when a top-K prediction has the correct predicate, correct subject and
+object classes, and IoU at least `--eval-iou-threshold` for both endpoint masks.
+`mR@K` averages recall across predicate classes present in the sampled evaluation
+set. Detailed per-predicate counts and recalls are retained in the JSON output.
 
 Programmatic dataloader construction is also available:
 
