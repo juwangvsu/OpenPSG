@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "psgtr-hf"
-version = "0.5.1"
+version = "0.5.2"
 description = "Panoptic Scene Graph Transformer implemented with Hugging Face Transformers"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -21,6 +21,7 @@ dependencies = [
 [project.scripts]
 psgtr-train = "psgtr_hf.training:main"
 psgtr-infer = "psgtr_hf.inference:main"
+psgtr-evaluate = "psgtr_hf.evaluating:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]

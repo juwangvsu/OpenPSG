@@ -361,3 +361,52 @@ apply training crops or flips. The output directory receives:
 
 Dataset indices refer to the selected split after relation-empty records have
 been filtered. Use `--image-ids` when stable identifiers are preferred.
+
+## Standalone checkpoint evaluation
+
+Evaluate a specific checkpoint without starting or resuming training:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/evaluate.py \
+  --checkpoint work_dirs/psgtr_hf/checkpoint-0004 \
+  --data-root /data/jwang/datasets/coco \
+  --annotation-file /data/jwang/datasets/psg/psg_train_val.json \
+  --output-dir work_dirs/psgtr_hf/evaluation-checkpoint-0004 \
+  --split both \
+  --samples 200 \
+  --batch-size 1 \
+  --num-workers 2 \
+  --amp
+```
+
+The installed command is equivalent:
+
+```bash
+psgtr-evaluate --checkpoint work_dirs/psgtr_hf/checkpoint-0004 ...
+```
+
+`--checkpoint` may also point to the training output directory containing
+`last_checkpoint`. The evaluator uses deterministic resizing, samples the same
+images for a given seed, and reports loss, PQ/SQ/RQ, thing/stuff PQ, predicate
+R@20/50/100, and predicate mR@20/50/100. It writes:
+
+```text
+output_dir/evaluation-checkpoint-0004.json
+output_dir/evaluation-checkpoint-0004-samples.json
+```
+
+It can run on four GPUs without duplicated samples:
+
+```bash
+CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --standalone --nproc-per-node=4 \
+  examples/evaluate.py \
+  --checkpoint work_dirs/psgtr_hf/checkpoint-0004 \
+  --data-root /data/jwang/datasets/coco \
+  --annotation-file /data/jwang/datasets/psg/psg_train_val.json \
+  --output-dir work_dirs/psgtr_hf/evaluation-checkpoint-0004 \
+  --split both \
+  --samples 200 \
+  --batch-size 1 \
+  --num-workers 2 \
+  --amp
+```
