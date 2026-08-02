@@ -36,3 +36,13 @@ CUDA_VISIBLE_DEVICES=0 python3 examples/infer.py   --checkpoint work_dirs/psgtr_
 result:
 work_dirs/psgtr_hf/inference-random/0001_image-2329401_index-7296.png
 
+evaluate:
+CUDA_VISIBLE_DEVICES=0 python3 examples/evaluate.py   --checkpoint work_dirs/psgtr_hf/checkpoint-0020   --data-root /data/jwang/datasets/coco   --annotation-file /data/jwang/datasets/psg/psg_train_val.json   --output-dir work_dirs/psgtr_hf/evaluation-checkpoint-0020   --split both   --samples 200   --batch-size 1   --num-workers 2   --amp
+
+eval result:
+	epoch 22:
+	R@20 R@50 R@50 etc pretty close to paper
+	PQ 18% seems better than paper, but PQ is lower than standard DETR.
+ 
+about eva metricass: https://www.google.com/search?q=panoptic+segmentation+metric+PQ&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRiPAtIBBzU4NGowajeoAgiwAgE&sourceid=chrome&ie=UTF-8&udm=50&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832VstEKsVDqPorK0Gahnm2nrruedQ0d32Et2kDhW_DVrEiVEEKhGMS6J6qOai58Kp-12o7QqJlXuVqdyTgH1QDy7e8aDHIiAV59eoNEOdQ5wN2YOMPs54GjlPbPJtTCnxhyqI7tuqva5fzBlqnQEIGh_ne8PEFRlIPmVd0ZGJtaHnOLKgCQ&aep=10&ntc=1&mstk=AUtExfBbx9kIlUPDIVO7G41SUzDKv8A6baiqP2I57qPaKguTUdY8hAws5tny3WdTiGWS0SnvclW3YcfHMtaxa8VvoDIKXlaFuxFxPtgmfEVupXb8Fp6Zi9xJBJY8v_nAz_W-NVi-BEq7VPoDvH7A311s7_Bqc8EI-g4fJXF48K69zOzYbKOE3vLjqRZHACm--sL7DaU3b3fwEgUO7JafXYye-reGDviGOIcvsUL4aqirJCrDoarLJ6oHaPxl6VIEsiUt-4bJF7Dgg5pDGMsBVmn4H60edWL-CgC6nGbcbJ9G8oSDHYd5iQ-in1yuR5kllxcEjvs8ggTlZvzWSg&aioh=3&csuir=1&atvm=2&mtid=H7JvauqdO8-w5NoPiM_2uAg
+
