@@ -43,6 +43,35 @@ eval result:
 	epoch 22:
 	R@20 R@50 R@50 etc pretty close to paper
 	PQ 18% seems better than paper, but PQ is lower than standard DETR.
+Evaluating Checkpoint: 0020                                                                                                      
+==================================================                                                                               
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████| 604/604 [00:00<00:00, 8396.67it/s] 
+split=train samples=200 loss=32.2163 PQ=22.80 SQ=64.62 RQ=29.04 PQ_th=24.13 PQ_st=20.88 R@20=34.50 mR@20=28.04 R@50=43.81 mR@50=3
+3.49 R@100=45.60 mR@100=34.14                                                                                                    
+split=validation samples=200 loss=48.4582 PQ=18.66 SQ=60.86 RQ=24.08 PQ_th=20.28 PQ_st=16.39 R@20=24.31 mR@20=16.92 R@50=30.14 mR
+@50=20.98 R@100=32.29 mR@100=22.97 
  
 about eva metricass: https://www.google.com/search?q=panoptic+segmentation+metric+PQ&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRiPAtIBBzU4NGowajeoAgiwAgE&sourceid=chrome&ie=UTF-8&udm=50&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832VstEKsVDqPorK0Gahnm2nrruedQ0d32Et2kDhW_DVrEiVEEKhGMS6J6qOai58Kp-12o7QqJlXuVqdyTgH1QDy7e8aDHIiAV59eoNEOdQ5wN2YOMPs54GjlPbPJtTCnxhyqI7tuqva5fzBlqnQEIGh_ne8PEFRlIPmVd0ZGJtaHnOLKgCQ&aep=10&ntc=1&mstk=AUtExfBbx9kIlUPDIVO7G41SUzDKv8A6baiqP2I57qPaKguTUdY8hAws5tny3WdTiGWS0SnvclW3YcfHMtaxa8VvoDIKXlaFuxFxPtgmfEVupXb8Fp6Zi9xJBJY8v_nAz_W-NVi-BEq7VPoDvH7A311s7_Bqc8EI-g4fJXF48K69zOzYbKOE3vLjqRZHACm--sL7DaU3b3fwEgUO7JafXYye-reGDviGOIcvsUL4aqirJCrDoarLJ6oHaPxl6VIEsiUt-4bJF7Dgg5pDGMsBVmn4H60edWL-CgC6nGbcbJ9G8oSDHYd5iQ-in1yuR5kllxcEjvs8ggTlZvzWSg&aioh=3&csuir=1&atvm=2&mtid=H7JvauqdO8-w5NoPiM_2uAg
 
+-------------8/3/26 psg_lidarenh_14 ----------------
+gpu4
+gpu-ref4
+https://chatgpt.com/g/g-p-6a6fc37caae88191a57e66bbf25e1ff4-psg-scene-generation/c/6a70d880-2b84-83ea-a7ef-6fca4d59b4a3
+
+--convert kitti360 to coco format 
+--add lidar raw data, 'fake' relation in annotation
+/data/jwang/datasets/kitti360_psg_smoke
+
+kitti360:
+
+train:
+root@gpu4:/data/jwang/Documents/OpenPSG/psg_lidarenh_014# CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun   --standalone   --nproc-per-node=4   examples/train.py   --psgtr-checkpoint ../psgtr_hf/work_dirs/psgtr_hf/checkpoint-0024   --data-root /data/jwang/datasets/kitti360_psg_smoke   --annotation-file /data/jwang/datasets/kitti360_psg_smoke/annotations/psg_train_val.json   --lidar-manifest /data/jwang/datasets/kitti360_psg_smoke/lidar/manifest.json   --output-dir work_dirs/psg_lidarenh_kitti360   --batch-size 1   --gradient-accumulation-steps 2   --num-workers 2   --amp
+
+pgrep -af 'torchrun|examples/train.py'
+
+
+-------------- kitti 360 -------------------
+gpu1, gpu-ref2
+export KITTI360_DATASET=/data/jwang/datasets/kitti360/
+cd ~/kitti360Scripts/kitti360scripts/viewer#
+python3 kitti360Viewer3D.py
