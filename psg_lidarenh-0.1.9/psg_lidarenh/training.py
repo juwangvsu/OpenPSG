@@ -27,6 +27,15 @@ from .evaluation import evaluate_model
 from .modeling_psg_lidarenh import (
     PsgLidarEnhForPanopticSceneGraphGeneration,
 )
+from .training_modes import (
+    FINETUNE,
+    FREEZE_IMAGE_BACKBONE,
+    FREEZE_PSGTR,
+    REINITIALIZE_PSGTR_FREEZE_BACKBONE,
+    configure_trainability,
+    enforce_frozen_module_modes,
+    optimizer_parameter_groups,
+)
 
 
 class RankPartitionSampler(Sampler[int]):
@@ -44,6 +53,38 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Train global LiDAR-enhanced PSGTR")
     parser.add_argument("--psgtr-checkpoint", type=Path)
     parser.add_argument("--resume", type=str)
+    training_mode = parser.add_mutually_exclusive_group()
+    training_mode.add_argument(
+        "--freeze-image-backbone",
+        dest="training_mode",
+        action="store_const",
+        const=FREEZE_IMAGE_BACKBONE,
+        help=(
+            "Load the complete pretrained PSGTR checkpoint but freeze only "
+            "the convolutional image backbone (ResNet)."
+        ),
+    )
+    training_mode.add_argument(
+        "--freeze-psgtr",
+        dest="training_mode",
+        action="store_const",
+        const=FREEZE_PSGTR,
+        help=(
+            "Freeze the entire pretrained PSGTR branch and train only the "
+            "LiDAR encoder and global fusion module."
+        ),
+    )
+    training_mode.add_argument(
+        "--reinitialize-psgtr-freeze-backbone",
+        dest="training_mode",
+        action="store_const",
+        const=REINITIALIZE_PSGTR_FREEZE_BACKBONE,
+        help=(
+            "Copy only the pretrained ResNet, freeze it, and randomly "
+            "initialize the remaining PSGTR and LiDAR parameters."
+        ),
+    )
+    parser.set_defaults(training_mode=None)
     parser.add_argument(
         "--data-root",
         type=Path,
@@ -171,6 +212,8 @@ def save_checkpoint(
     output_dir: Path,
     epoch: int,
     global_step: int,
+    training_mode: str,
+    trainability: dict[str, object],
 ) -> Path:
     unwrapped = model.module if isinstance(model, DistributedDataParallel) else model
     checkpoint = output_dir / f"checkpoint-{epoch:04d}"
@@ -183,6 +226,8 @@ def save_checkpoint(
             "epoch": epoch,
             "global_step": global_step,
             "optimizer": optimizer.state_dict(),
+            "training_mode": training_mode,
+            "trainability": trainability,
         },
         temporary / "training_state.pt",
     )
@@ -260,6 +305,16 @@ def main(argv: list[str] | None = None) -> None:
     )
 
     resume = resolve_resume(args.resume, args.output_dir)
+    resume_state: dict[str, Any] | None = None
+    if resume is not None:
+        state_path = resume / "training_state.pt"
+        if state_path.is_file():
+            resume_state = torch.load(
+                state_path,
+                map_location="cpu",
+                weights_only=False,
+            )
+
     start_epoch = 1
     global_step = 0
     if resume is not None:
@@ -267,10 +322,29 @@ def main(argv: list[str] | None = None) -> None:
             resume,
             use_safetensors=True,
         )
+        saved_mode = getattr(model.config, "training_mode", None)
+        if saved_mode is None and resume_state is not None:
+            saved_mode = resume_state.get("training_mode")
+        saved_mode = saved_mode or FINETUNE
+        if args.training_mode is not None and args.training_mode != saved_mode:
+            raise ValueError(
+                "Cannot change training mode while resuming: "
+                f"checkpoint={saved_mode!r}, requested={args.training_mode!r}. "
+                "Start a new output directory instead."
+            )
+        selected_training_mode = saved_mode
     else:
-        model = PsgLidarEnhForPanopticSceneGraphGeneration.from_psgtr_pretrained(
-            args.psgtr_checkpoint,
-        )
+        selected_training_mode = args.training_mode or FINETUNE
+        if selected_training_mode == REINITIALIZE_PSGTR_FREEZE_BACKBONE:
+            model = (
+                PsgLidarEnhForPanopticSceneGraphGeneration
+                .from_psgtr_backbone_pretrained(args.psgtr_checkpoint)
+            )
+        else:
+            model = (
+                PsgLidarEnhForPanopticSceneGraphGeneration
+                .from_psgtr_pretrained(args.psgtr_checkpoint)
+            )
     metadata = train_dataset.base_dataset.metadata
     expected_objects = len(metadata.thing_classes) + len(metadata.stuff_classes)
     if model.config.num_object_labels != expected_objects:
@@ -280,31 +354,28 @@ def main(argv: list[str] | None = None) -> None:
         )
     if model.config.num_relation_labels != len(metadata.predicate_classes):
         raise ValueError("Checkpoint predicate vocabulary does not match dataset")
+    model.config.training_mode = selected_training_mode
+    model.config.psgtr_initialization = (
+        "pretrained_image_backbone_only"
+        if selected_training_mode == REINITIALIZE_PSGTR_FREEZE_BACKBONE
+        else "full_psgtr_pretrained"
+    )
+    trainability_report = configure_trainability(model, selected_training_mode)
+    trainability = trainability_report.to_dict()
     model.to(device)
 
-    backbone_parameters = []
-    other_parameters = []
-    for name, parameter in model.named_parameters():
-        if not parameter.requires_grad:
-            continue
-        if "model.backbone" in name:
-            backbone_parameters.append(parameter)
-        else:
-            other_parameters.append(parameter)
     optimizer = torch.optim.AdamW(
-        [
-            {"params": other_parameters, "lr": args.lr},
-            {"params": backbone_parameters, "lr": args.backbone_lr},
-        ],
+        optimizer_parameter_groups(
+            model,
+            learning_rate=args.lr,
+            backbone_learning_rate=args.backbone_lr,
+        ),
         weight_decay=args.weight_decay,
     )
-    if resume is not None:
-        state_path = resume / "training_state.pt"
-        if state_path.is_file():
-            state = torch.load(state_path, map_location="cpu", weights_only=False)
-            optimizer.load_state_dict(state["optimizer"])
-            start_epoch = int(state["epoch"]) + 1
-            global_step = int(state.get("global_step", 0))
+    if resume_state is not None:
+        optimizer.load_state_dict(resume_state["optimizer"])
+        start_epoch = int(resume_state["epoch"]) + 1
+        global_step = int(resume_state.get("global_step", 0))
 
     if world_size > 1:
         model = DistributedDataParallel(
@@ -315,8 +386,33 @@ def main(argv: list[str] | None = None) -> None:
     scaler = torch.amp.GradScaler("cuda", enabled=args.amp and device.type == "cuda")
 
     if rank == 0:
+        initialization = getattr(
+            model.module.config if isinstance(model, DistributedDataParallel) else model.config,
+            "psgtr_initialization",
+            "full_psgtr_pretrained",
+        )
+        training_configuration = {
+            "training_mode": selected_training_mode,
+            "psgtr_initialization": initialization,
+            "learning_rate": args.lr,
+            "backbone_learning_rate": args.backbone_lr,
+            "weight_decay": args.weight_decay,
+            "trainability": trainability,
+        }
+        (args.output_dir / "training-configuration.json").write_text(
+            json.dumps(training_configuration, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        print(
+            "training_mode="
+            f"{selected_training_mode} "
+            f"trainable={trainability_report.trainable_parameters:,}/"
+            f"{trainability_report.total_parameters:,}",
+            flush=True,
+        )
         sample_report = {
             "seed": args.seed,
+            "training_mode": selected_training_mode,
             "train_indices": train_eval_indices,
             "validation_indices": val_eval_indices,
         }
@@ -329,6 +425,10 @@ def main(argv: list[str] | None = None) -> None:
         if train_sampler is not None:
             train_sampler.set_epoch(epoch)
         model.train()
+        trainable_model = (
+            model.module if isinstance(model, DistributedDataParallel) else model
+        )
+        enforce_frozen_module_modes(trainable_model, selected_training_mode)
         optimizer.zero_grad(set_to_none=True)
         total_loss = torch.zeros(1, dtype=torch.float64, device=device)
         batch_count = torch.zeros(1, dtype=torch.float64, device=device)
@@ -375,7 +475,10 @@ def main(argv: list[str] | None = None) -> None:
                 scaler.scale(scaled_loss).backward()
             if should_step:
                 scaler.unscale_(optimizer)
-                torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
+                torch.nn.utils.clip_grad_norm_(
+                    (parameter for parameter in model.parameters() if parameter.requires_grad),
+                    args.max_grad_norm,
+                )
                 scaler.step(optimizer)
                 scaler.update()
                 optimizer.zero_grad(set_to_none=True)
@@ -391,6 +494,7 @@ def main(argv: list[str] | None = None) -> None:
             "epoch": epoch,
             "global_step": global_step,
             "train_loss": train_loss,
+            "training_mode": selected_training_mode,
         }
         if epoch % args.eval_every == 0 and rank == 0:
             print(
@@ -437,6 +541,8 @@ def main(argv: list[str] | None = None) -> None:
                         args.output_dir,
                         epoch,
                         global_step,
+                        selected_training_mode,
+                        trainability,
                     )
                 )
             if epoch % args.eval_every == 0:

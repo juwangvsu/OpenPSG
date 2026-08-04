@@ -443,7 +443,6 @@ def run_inference(args: argparse.Namespace) -> list[dict[str, Any]]:
     metadata = dataset.base_dataset.metadata
     object_classes = _object_classes(metadata)
     predicate_classes = tuple(metadata.predicate_classes)
-    print(f"loading checkpoint {checkpoint}")
     model = PsgLidarEnhForPanopticSceneGraphGeneration.from_pretrained(
         checkpoint,
         use_safetensors=True,
@@ -505,7 +504,6 @@ def run_inference(args: argparse.Namespace) -> list[dict[str, Any]]:
         stem = f"index-{dataset_index:06d}_image-{image_id}"
         image_path = args.output_dir / f"{stem}.png"
         json_path = args.output_dir / f"{stem}.json"
-        print(f"save image_path {image_path}")
         comparison.save(image_path)
         payload = {
             "checkpoint": str(checkpoint.resolve()),

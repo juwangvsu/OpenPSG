@@ -1,6 +1,10 @@
 gpu4
 gpu-ref4
+docker img:
+	jwang3vsu/psglidar:latest
 /data/jwang/Documents/OpenPSG/psgtr_hf#
+
+docker run -t -d --restart always --shm-size=16g -v $PWD:/workspace/ -v /data:/data -w /workspace --gpus all --net host --name gpu-ref4 jwang3vsu/psglidar:latest 
 
 python3 examples/train.py   --data-root /data/jwang/datasets/coco   --annotation-file /data/jwang/datasets/psg/psg_train_val.json   --output-dir work_dirs/psgtr_hf
 
@@ -78,9 +82,29 @@ root@gpu4:/data/jwang/Documents/OpenPSG/psg_lidarenh_014# CUDA_VISIBLE_DEVICES=0
 
 CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun   --standalone   --nproc-per-node=4   examples/train.py   --psgtr-checkpoint ../psgtr_hf/work_dirs/psgtr_hf/checkpoint-0024   --data-root /data/jwang/datasets/kitti360_psg_3000   --annotation-file /data/jwang/datasets/kitti360_psg_3000/annotations/psg_train_val.json   --lidar-manifest /data/jwang/datasets/kitti360_psg_3000/lidar/manifest.json   --output-dir work_dirs/psg_lidarenh_kitti360   --batch-size 1   --gradient-accumulation-steps 2   --num-workers 2   --amp
 
+train (1.9 freeze backbone):
+CUDA_VISIBLE_DEVICES=0,1,2,3 \
+torchrun \
+  --standalone \
+  --nproc-per-node=4 \
+  examples/train.py \
+  --psgtr-checkpoint ../psgtr_hf/work_dirs/psgtr_hf/checkpoint-0024 \
+  --reinitialize-psgtr-freeze-backbone \
+  --data-root /data/jwang/datasets/kitti360_psg_3000 \
+  --annotation-file /data/jwang/datasets/kitti360_psg_3000/annotations/psg_train_val.json \
+  --lidar-manifest /data/jwang/datasets/kitti360_psg_3000/lidar/manifest.json \
+  --output-dir work_dirs/psg_lidarenh_reinitialized \
+  --batch-size 1 \
+  --gradient-accumulation-steps 2 \
+  --num-workers 2 \
+  --amp
+
 pgrep -af 'torchrun|examples/train.py'
 
 scp -P 9035 psg_lidarenh-0.1.6-src.zip gputest@dex2:
+
+infer:
+CUDA_VISIBLE_DEVICES=0 python3 examples/infer.py   --checkpoint work_dirs/psg_lidarenh_kitti360/checkpoint-0010   --data-root /data/jwang/datasets/kitti360_psg_3000   --annotation-file /data/jwang/datasets/kitti360_psg_3000/annotations/psg_train_val.json   --split train   --random-count 8   --seed 42   --output-dir work_dirs/psg_lidarenh_kitti360/inference-random-ep10 --lidar-manifest /data/jwang/datasets/kitti360_psg_3000/lidar/manifest.json 
 
 -------------- kitti 360 -------------------
 gpu1, gpu-ref2

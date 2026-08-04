@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "psg-lidarenh"
+version = "0.1.9"
+description = "Global LiDAR enhancement for PSGTR 2D boxes and scene-graph predicates"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "OpenAI"}]
+dependencies = [
+  "torch>=2.1",
+  "transformers>=4.40",
+  "numpy>=1.24",
+  "pillow>=10",
+  "psgtr-hf>=0.5.2,<0.6",
+]
+
+[project.scripts]
+psg-lidarenh-train = "psg_lidarenh.training:main"
+psg-lidarenh-evaluate = "psg_lidarenh.evaluating:main"
+psg-lidarenh-infer = "psg_lidarenh.inference:main"
+psg-lidarenh-convert-kitti360 = "psg_lidarenh.kitti360:main"
+
+[tool.setuptools.packages.find]
+include = ["psg_lidarenh*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
