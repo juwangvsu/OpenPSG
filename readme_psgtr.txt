@@ -63,12 +63,24 @@ https://chatgpt.com/g/g-p-6a6fc37caae88191a57e66bbf25e1ff4-psg-scene-generation/
 /data/jwang/datasets/kitti360_psg_smoke
 
 kitti360:
+psg-lidarenh-convert-kitti360 \
+  --kitti360-root /data/jwang/datasets/kitti360 \
+  --source-openpsg-json /data/jwang/datasets/psg/psg_train_val.json \
+  --output-root /data/jwang/datasets/kitti360_psg_3000 \
+  --seq 0 \
+  --max-frames 3000 \
+  --link-mode symlink \
+  --relation-mode spatial2d \
+  --overwrite
 
 train:
 root@gpu4:/data/jwang/Documents/OpenPSG/psg_lidarenh_014# CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun   --standalone   --nproc-per-node=4   examples/train.py   --psgtr-checkpoint ../psgtr_hf/work_dirs/psgtr_hf/checkpoint-0024   --data-root /data/jwang/datasets/kitti360_psg_smoke   --annotation-file /data/jwang/datasets/kitti360_psg_smoke/annotations/psg_train_val.json   --lidar-manifest /data/jwang/datasets/kitti360_psg_smoke/lidar/manifest.json   --output-dir work_dirs/psg_lidarenh_kitti360   --batch-size 1   --gradient-accumulation-steps 2   --num-workers 2   --amp
 
+CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun   --standalone   --nproc-per-node=4   examples/train.py   --psgtr-checkpoint ../psgtr_hf/work_dirs/psgtr_hf/checkpoint-0024   --data-root /data/jwang/datasets/kitti360_psg_3000   --annotation-file /data/jwang/datasets/kitti360_psg_3000/annotations/psg_train_val.json   --lidar-manifest /data/jwang/datasets/kitti360_psg_3000/lidar/manifest.json   --output-dir work_dirs/psg_lidarenh_kitti360   --batch-size 1   --gradient-accumulation-steps 2   --num-workers 2   --amp
+
 pgrep -af 'torchrun|examples/train.py'
 
+scp -P 9035 psg_lidarenh-0.1.6-src.zip gputest@dex2:
 
 -------------- kitti 360 -------------------
 gpu1, gpu-ref2

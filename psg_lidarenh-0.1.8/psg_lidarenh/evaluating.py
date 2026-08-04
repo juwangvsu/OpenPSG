@@ -2,12 +2,9 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 from pathlib import Path
 
-import torch
 import torch.distributed as dist
-from torch.nn.parallel import DistributedDataParallel
 
 from .evaluation import evaluate_model
 from .modeling_psg_lidarenh import PsgLidarEnhForPanopticSceneGraphGeneration
@@ -58,42 +55,46 @@ def main(argv: list[str] | None = None) -> None:
     device, rank, local_rank, world_size = initialize_distributed(args.device)
     seed_everything(args.seed + rank)
     checkpoint = resolve_checkpoint(args.checkpoint)
-    model = PsgLidarEnhForPanopticSceneGraphGeneration.from_pretrained(
-        checkpoint,
-        use_safetensors=True,
-    ).to(device)
-    if world_size > 1:
-        model = DistributedDataParallel(
-            model,
-            device_ids=[local_rank] if device.type == "cuda" else None,
-            output_device=local_rank if device.type == "cuda" else None,
-        )
-    requested = (
-        ("train", "validation") if args.split == "both" else (args.split,)
-    )
-    report = {"checkpoint": str(checkpoint.resolve()), "splits": {}}
-    sample_report: dict[str, list[int]] = {}
-    for offset, split in enumerate(requested):
-        dataset = build_dataset(args, split, training=False)
-        subset, indices = sample_subset(dataset, args.samples, args.seed + 1000 + offset)
-        loader = make_eval_loader(
-            subset,
-            args.batch_size,
-            args.num_workers,
-            device,
-            rank,
-            world_size,
-        )
-        report["splits"][split] = evaluate_model(
-            model,
-            loader,
-            device,
-            dataset.base_dataset.metadata,
-            amp=args.amp,
-            recall_ks=args.recall_k,
-        )
-        sample_report[split] = indices
+
+    # Evaluation is rank-zero-only. This avoids all metric collectives and is
+    # deterministic for arbitrary sample counts. Other ranks wait below.
     if rank == 0:
+        model = PsgLidarEnhForPanopticSceneGraphGeneration.from_pretrained(
+            checkpoint,
+            use_safetensors=True,
+        ).to(device)
+        requested = (
+            ("train", "validation") if args.split == "both" else (args.split,)
+        )
+        report = {"checkpoint": str(checkpoint.resolve()), "splits": {}}
+        sample_report: dict[str, list[int]] = {}
+        for offset, split in enumerate(requested):
+            dataset = build_dataset(args, split, training=False)
+            subset, indices = sample_subset(
+                dataset,
+                args.samples,
+                args.seed + 1000 + offset,
+            )
+            loader = make_eval_loader(
+                subset,
+                args.batch_size,
+                args.num_workers,
+                device,
+                0,
+                1,
+            )
+            print(f"evaluating split={split} samples={len(subset)} on rank=0", flush=True)
+            report["splits"][split] = evaluate_model(
+                model,
+                loader,
+                device,
+                dataset.base_dataset.metadata,
+                amp=args.amp,
+                recall_ks=args.recall_k,
+                reduce_across_processes=False,
+                progress_label=f"{split}-eval",
+            )
+            sample_report[split] = indices
         args.output_dir.mkdir(parents=True, exist_ok=True)
         name = checkpoint.name
         (args.output_dir / f"evaluation-{name}.json").write_text(
@@ -104,7 +105,9 @@ def main(argv: list[str] | None = None) -> None:
             json.dumps(sample_report, indent=2) + "\n",
             encoding="utf-8",
         )
+
     if world_size > 1:
+        dist.barrier(device_ids=[local_rank] if device.type == "cuda" else None)
         dist.destroy_process_group()
 
 

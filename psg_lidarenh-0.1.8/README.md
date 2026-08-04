@@ -283,10 +283,88 @@ psg-lidarenh-convert-kitti360 \
 This targets 100 training images and 10 validation images.
 
 
-## Distributed evaluation
+## Evaluation during distributed training
 
-Evaluation uses an unpadded rank partition so each selected image is processed
-exactly once. The underlying model, rather than the DDP wrapper, is called
-during evaluation. This avoids DDP per-forward collective deadlocks when the
-selected sample count is not divisible by the number of ranks. Metrics are
-explicitly reduced after local evaluation.
+Periodic evaluation is rank-zero-only. Rank zero evaluates each selected image
+exactly once with the underlying model while the other ranks wait at the epoch
+barrier. This avoids DDP forward and metric-collective deadlocks when sample
+counts are uneven.
+
+## Evaluation performance in 0.1.6
+
+Evaluation no longer performs Python-loop mask IoU for every pair of up to 200
+relation endpoints. Panoptic matching is computed from non-overlapping segment
+maps in linear time over image pixels, and predicate recall uses subject/object
+bounding-box IoU. The JSON report records this metric basis explicitly.
+
+The first evaluation sample prints `stage=forward`, `stage=postprocess`, and
+`stage=metrics`, followed by `processed=1/N`, so a slow stage is visible rather
+than appearing as a silent hang.
+
+
+## Evaluation inference in 0.1.7
+
+Evaluation forwards are inference-only and pass `labels=None`. Ground-truth
+labels remain available to the separate PQ and predicate-recall implementation,
+but the model does not invoke its training criterion. This avoids running the
+triplet Hungarian matcher over potentially hundreds or thousands of generated
+KITTI-360 pseudo-relations in a single frame. Evaluation JSON therefore reports
+`training_loss_computed: false` and does not include an evaluation-loss field.
+
+## Checkpoint inference and visualization
+
+Run a checkpoint on a deterministic random set of training samples:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python3 examples/infer.py \
+  --checkpoint work_dirs/psg_lidarenh_kitti360/checkpoint-0008 \
+  --data-root /data/jwang/datasets/kitti360_psg \
+  --annotation-file /data/jwang/datasets/kitti360_psg/annotations/psg_train_val.json \
+  --lidar-manifest /data/jwang/datasets/kitti360_psg/lidar/manifest.json \
+  --output-dir work_dirs/psg_lidarenh_kitti360/inference-random \
+  --random-count 8 \
+  --seed 42 \
+  --top-k 20 \
+  --score-threshold 0.25 \
+  --amp
+```
+
+Select exact filtered training-dataset indices:
+
+```bash
+python3 examples/infer.py \
+  --checkpoint work_dirs/psg_lidarenh_kitti360/checkpoint-0008 \
+  --data-root /data/jwang/datasets/kitti360_psg \
+  --annotation-file /data/jwang/datasets/kitti360_psg/annotations/psg_train_val.json \
+  --lidar-manifest /data/jwang/datasets/kitti360_psg/lidar/manifest.json \
+  --output-dir work_dirs/psg_lidarenh_kitti360/inference-indices \
+  --indices 0 17 48
+```
+
+Select exact OpenPSG image IDs:
+
+```bash
+python3 examples/infer.py \
+  --checkpoint work_dirs/psg_lidarenh_kitti360/checkpoint-0008 \
+  --data-root /data/jwang/datasets/kitti360_psg \
+  --annotation-file /data/jwang/datasets/kitti360_psg/annotations/psg_train_val.json \
+  --lidar-manifest /data/jwang/datasets/kitti360_psg/lidar/manifest.json \
+  --output-dir work_dirs/psg_lidarenh_kitti360/inference-image-ids \
+  --image-ids 287 338
+```
+
+The installed command is `psg-lidarenh-infer`. Each selected sample produces a
+side-by-side PNG, a complete JSON record, and an entry in `results.json`:
+
+```text
+output_dir/
+├── index-000000_image-287.png
+├── index-000000_image-287.json
+└── results.json
+```
+
+The left panel displays ground-truth panoptic entities and relations. The right
+panel displays the top-scoring predicted subject-predicate-object triplets with
+subject/object masks, endpoint boxes, and confidence scores. Inference always
+uses `labels=None`, so it does not invoke the expensive Hungarian training
+criterion.

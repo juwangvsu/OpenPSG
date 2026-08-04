@@ -65,7 +65,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--max-grad-norm", type=float, default=0.1)
     parser.add_argument("--save-every", type=int, default=1)
-    parser.add_argument("--eval-every", type=int, default=4)
+    parser.add_argument("--eval-every", type=int, default=10)
     parser.add_argument("--eval-samples", type=int, default=200)
     parser.add_argument("--eval-batch-size", type=int, default=1)
     parser.add_argument("--eval-recall-k", type=int, nargs="+", default=[20, 50, 100])
@@ -238,21 +238,25 @@ def main(argv: list[str] | None = None) -> None:
         args.eval_samples,
         args.seed + 2001,
     )
+    # Evaluation is intentionally rank-zero-only. The fixed subsets are small,
+    # while distributed metric reduction is fragile when per-rank samples
+    # produce different optional loss keys. Other ranks wait at the epoch
+    # barrier and resume training after rank zero finishes evaluation.
     train_eval_loader = make_eval_loader(
         train_eval,
         args.eval_batch_size,
         args.num_workers,
         device,
-        rank,
-        world_size,
+        0,
+        1,
     )
     val_eval_loader = make_eval_loader(
         val_eval,
         args.eval_batch_size,
         args.num_workers,
         device,
-        rank,
-        world_size,
+        0,
+        1,
     )
 
     resume = resolve_resume(args.resume, args.output_dir)
@@ -388,13 +392,12 @@ def main(argv: list[str] | None = None) -> None:
             "global_step": global_step,
             "train_loss": train_loss,
         }
-        if epoch % args.eval_every == 0:
-            if rank == 0:
-                print(
-                    f"epoch={epoch:03d} evaluating train "
-                    f"samples={len(train_eval)}",
-                    flush=True,
-                )
+        if epoch % args.eval_every == 0 and rank == 0:
+            print(
+                f"epoch={epoch:03d} evaluating train "
+                f"samples={len(train_eval)} on rank=0",
+                flush=True,
+            )
             report["train_evaluation"] = evaluate_model(
                 model,
                 train_eval_loader,
@@ -402,13 +405,14 @@ def main(argv: list[str] | None = None) -> None:
                 metadata,
                 amp=args.amp,
                 recall_ks=args.eval_recall_k,
+                reduce_across_processes=False,
+                progress_label=f"epoch={epoch:03d} train-eval",
             )
-            if rank == 0:
-                print(
-                    f"epoch={epoch:03d} evaluating validation "
-                    f"samples={len(val_eval)}",
-                    flush=True,
-                )
+            print(
+                f"epoch={epoch:03d} evaluating validation "
+                f"samples={len(val_eval)} on rank=0",
+                flush=True,
+            )
             report["validation_evaluation"] = evaluate_model(
                 model,
                 val_eval_loader,
@@ -416,6 +420,9 @@ def main(argv: list[str] | None = None) -> None:
                 metadata,
                 amp=args.amp,
                 recall_ks=args.eval_recall_k,
+                reduce_across_processes=False,
+                progress_label=f"epoch={epoch:03d} validation-eval",
+                progress_every=1,
             )
         if rank == 0:
             print(

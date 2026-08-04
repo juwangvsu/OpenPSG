@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "psg-lidarenh"
-version = "0.1.4"
+version = "0.1.8"
 description = "Global LiDAR enhancement for PSGTR 2D boxes and scene-graph predicates"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -21,6 +21,7 @@ dependencies = [
 [project.scripts]
 psg-lidarenh-train = "psg_lidarenh.training:main"
 psg-lidarenh-evaluate = "psg_lidarenh.evaluating:main"
+psg-lidarenh-infer = "psg_lidarenh.inference:main"
 psg-lidarenh-convert-kitti360 = "psg_lidarenh.kitti360:main"
 
 [tool.setuptools.packages.find]
